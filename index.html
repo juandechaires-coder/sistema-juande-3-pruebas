@@ -1,0 +1,375 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Sistema Juande 3.0 Beta 2 — Integración de pruebas</title><style>
+:root{color-scheme:dark;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#0b1220;color:#eef5ff}*{box-sizing:border-box}body{margin:0}header{padding:18px 16px;border-bottom:1px solid #26344c;display:flex;justify-content:space-between;align-items:center}h1{font-size:23px;margin:8px 0 14px}h2{font-size:16px;margin:0 0 12px}.sub{color:#91a6c2;font-size:12px}.brand{font-weight:800;letter-spacing:.05em}.accent{color:#52ddb1}main{padding:16px 14px 105px;max-width:900px;margin:auto}.page{display:none}.page.active{display:block}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.card{border:1px solid #2c3d55;background:#162239;border-radius:14px;padding:15px;margin-bottom:12px}.card small{display:block;color:#a4b5ca;margin-bottom:8px}.metric{font-size:24px;font-weight:800}.muted{color:#a4b5ca;font-size:13px;line-height:1.5}.row{display:flex;justify-content:space-between;align-items:center;gap:10px}.stack{display:grid;gap:12px}label{display:grid;gap:5px;color:#a9bbd3;font-size:12px}input,select,textarea{background:#0c182a;border:1px solid #43556e;border-radius:9px;color:white;padding:12px;font-size:16px;width:100%}textarea{min-height:80px}button{cursor:pointer;border:0;border-radius:9px;padding:12px 14px;font-weight:700;font-size:13px}.primary{background:#4ed6ab;color:#08231c}.secondary{background:#2a3e58;color:white}.danger{background:#613041;color:white}.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.item{border-top:1px solid #34435a;padding:13px 0;line-height:1.5}.item:first-child{border-top:0}.item b{font-size:14px}nav{position:fixed;bottom:0;left:0;right:0;background:#101d31;border-top:1px solid #324159;display:grid;grid-template-columns:repeat(7,1fr);padding:9px 4px max(13px,env(safe-area-inset-bottom));z-index:10}nav button{background:none;color:#9baec8;font-size:10px;padding:6px 1px;display:grid;gap:5px;justify-items:center}nav button span{font-size:21px}nav button.active{color:#56e1b6}.notice{border-left:3px solid #50d8aa;background:#19333b;padding:12px;border-radius:8px;font-size:12px;color:#d3e5e4;line-height:1.5}.filters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.pill{display:inline-block;padding:3px 8px;border-radius:99px;background:#283d55;color:#d9e8fa;font-size:11px}.pill.warn{background:#594327;color:#ffdc91}.pill.no{background:#51313d;color:#ffd2db}.pill.yes{background:#214c40;color:#adf5d5}.tiny{font-size:11px;color:#9ab0c9}.item .actions button{padding:8px 10px}.full{grid-column:1/-1}.decision-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-bottom:12px}.decision-tile{border:1px solid #354b65;border-radius:11px;padding:12px 8px;text-align:center;background:#101d31}.decision-tile strong{display:block;font-size:24px}.decision-tile span{font-size:11px;color:#afc0d5}.review-panel{background:#101d31;border:1px solid #42617c;border-radius:10px;padding:12px;margin:10px 0}.review-panel label{margin-bottom:9px}.decision-section{margin:15px 0 5px;border-top:1px solid #42536b;padding-top:12px}.decision-section h3{margin:0 0 4px;font-size:15px}.decision-section p{margin:0;font-size:12px;color:#a4b5ca}.decision-actions button{font-size:11px}.analysis-box{border:1px solid #3b6174;background:#102b38;padding:12px;border-radius:10px;margin:12px 0;line-height:1.6}.analysis-box strong{color:#78e5c3}.analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.analysis-grid>div{border:1px solid #3a5166;padding:9px;border-radius:8px}.analysis-grid small{color:#a9bed1}.analysis-grid b{display:block;font-size:19px}.check-row{display:flex;align-items:flex-start;gap:9px;font-size:12px;color:#c9d9e9;margin:7px 0}.check-row input{width:auto;margin-top:2px}.hidden{display:none!important}svg{max-width:100%}@media(min-width:650px){.grid{grid-template-columns:repeat(4,1fr)}}
+.parlay-leg{border:1px solid #354b65;border-radius:10px;padding:12px;margin-bottom:10px;background:#101d31}.pick-modal{position:fixed;inset:0;background:#050b15e8;z-index:30;overflow:auto;padding:22px 14px}.pick-modal .card{max-width:540px;margin:25px auto}.pick-modal.hidden{display:none}.pick-flag{margin-top:7px;color:#78e5c3;font-size:12px}</style></head><body><header><div><div class="brand">🔮 SISTEMA JUANDE</div><div class="sub">RADAR MULTIFUENTE · MOBILE 0.14</div></div><div class="sub accent" id="mode">INICIANDO</div></header><main>
+<section class="page active" id="inicio"><div class="sub">Estadísticas de registros reales</div><h1>Dashboard</h1><div class="grid"><div class="card"><small>Picks resueltos</small><div class="metric" id="m-resueltos">—</div></div><div class="card"><small>Win rate</small><div class="metric" id="m-win">—</div></div><div class="card"><small>Utilidad neta</small><div class="metric" id="m-profit">—</div></div><div class="card"><small>ROI</small><div class="metric" id="m-roi">—</div></div></div><div class="card"><h2>Seguimiento de decisiones</h2><div class="grid"><div><small>Apuestas registradas</small><div class="metric" id="m-executed">0</div></div><div><small>Oportunidades omitidas</small><div class="metric" id="m-skipped">0</div></div><div><small>Apuestas pendientes</small><div class="metric" id="m-pending">0</div></div><div><small>Investigaciones con resultado</small><div class="metric" id="m-research">0</div></div></div><p class="tiny">Las métricas financieras solo usan apuestas ejecutadas con cuota y unidades. Los resultados editoriales no se cuentan como apuestas.</p></div><div class="card"><h2>Evolución de unidades</h2><div id="chart"></div></div><div class="card"><h2>Registro histórico</h2><div id="history"></div></div><div class="notice">Los resultados históricos sin cuota o importe confirmado no se utilizan para calcular ROI. La aplicación no genera predicciones automáticamente a partir del porcentaje histórico.</div></section>
+<section class="page" id="radar"><div class="card" id="sj3-beta2-entry" style="border-color:#4ed6ab"><div class="row"><h2>🔮 Fichas de investigación 3.0 · Beta 2</h2><span class="pill yes">PRUEBA</span></div><p class="muted">Investigaciones multifuente, ocho módulos especializados, edición y cálculo documentado. Área independiente de las apuestas reales y de Supabase.</p><p class="tiny" id="sj3-beta2-count">Las fichas se guardan únicamente en este navegador.</p><div class="actions"><a class="primary" style="display:inline-block;text-decoration:none;border-radius:9px;padding:12px 14px;font-size:13px;font-weight:700" href="radar3-beta2.html">Abrir fichas 3.0 ↗</a></div><p class="tiny">La versión 2.0 permanece operativa. No se fusionan automáticamente los registros de investigación con el Radar 2.0.</p></div><div class="sub">Covers · Pickswise · Action Network · GameRead · OráculoSports</div><h1>Radar Multifuente</h1><div class="notice">Meta operativa: investigar todas las oportunidades sustentadas, sin límite artificial. No equivale a 5–10 apuestas. Sin cuota o probabilidad validada no se afirma un edge positivo.</div><div class="card"><div class="row"><h2>Jornada de análisis</h2><span class="pill" id="radarCount">0 candidatos</span></div><div class="filters"><label>Fecha<input type="date" id="filterDate"></label><label>Deporte<select id="filterSport"><option value="">Todos</option><option>NCAAF</option><option>NCAAF</option><option>NCAA</option><option>NFL</option><option>MLB</option><option>NBA</option><option>Baloncesto europeo</option><option>Otro</option></select></label><label>Estado<select id="filterStage"><option value="">Todos</option><option value="detectado">Detectado</option><option value="analisis">En análisis</option><option value="validado">Validado</option><option value="descartado">Descartado</option></select></label><label>Sección<select id="filterDecision"><option value="">Todas</option><option value="principal">Propuestas principales</option><option value="reserva">Condicionales y reservas</option><option value="no_aprobado">No aprobados</option><option value="pendiente">Sin clasificar</option></select></label><label>Calificación<select id="filterGrade"><option value="">Todas</option><option>A</option><option>A-</option><option>B+</option><option>B</option><option>C+</option><option>C</option><option>D</option><option>Sin calificar</option></select></label></div><div class="actions"><button class="secondary" id="clearFilters">Quitar filtros</button><button class="primary" id="loadJornada">Cargar ejemplos históricos (no recomendado)</button></div><p class="tiny">Reinicio 12/oct/2026: sin análisis precargados. Solo se muestran nuevas investigaciones.</p></div><div class="card"><h2>Importar lote de análisis</h2><p class="muted">Carga un JSON con 5–10 candidatos (o más). Revisa la vista previa y confirma: se fusiona con el Radar sin alterar picks ni historial. No se inventan probabilidades.</p><label>Archivo del lote (.json)<input id="batchFile" type="file" accept=".json,application/json"></label><div id="batchPreview" class="muted" style="margin-top:12px">Sin lote seleccionado.</div><div class="actions"><button class="primary" id="batchApply" type="button" disabled>Confirmar importación del lote</button><button class="secondary" id="batchCancel" type="button">Cancelar</button></div></div><div class="card" id="universalCard"><h2>🔎 Analizador universal de mercados · v0.8</h2><p class="muted">Captura un mercado propio. La evaluación local calcula métricas comprobables con tus datos; no consulta en vivo lesiones, cuotas ni estadísticas externas. Si faltan datos, el candidato queda pendiente.</p><form id="universalForm" class="stack"><label>Deporte<select name="sport" required><option>NCAAF</option><option>NFL</option><option>NBA</option><option>WNBA</option><option>MLB</option><option>NHL</option><option>Fútbol</option><option>Tenis</option><option>Baloncesto europeo</option><option>Otro</option></select></label><label>Fecha del evento<input name="date" type="date" required></label><label>Partido / evento<input name="event" required placeholder="Ej. Iowa State vs BYU"></label><label>Tipo de mercado<select name="kind" id="uniKind"><option value="player">Prop de jugador</option><option value="total">Total del partido</option><option value="spread">Hándicap / spread</option><option value="moneyline">Ganador / moneyline</option><option value="other">Otro mercado</option></select></label><label>Jugador o selección (equipo para hándicap / ganador)<input name="subject" placeholder="Ej. Jaylen Raynor / Iowa State"></label><label>Estadística / descripción del mercado<input name="stat" placeholder="Ej. yardas terrestres, puntos totales, rebotes"></label><label>Dirección<select name="direction"><option value="Over">Over</option><option value="Under">Under</option><option value="A favor">A favor (hándicap / ganador)</option><option value="Otro">Otro</option></select></label><div class="grid"><label>Línea (opcional para ganador)<input name="line" type="number" step="any" placeholder="17.5 / -3.5"></label><label>Cuota decimal<input name="odds" type="number" min="1.01" step="any" required placeholder="1.84"></label></div><label>Casa de apuestas<input name="book" placeholder="Stake, bet365, Playdoit..."></label><label>URL de fuente / referencia<input name="sourceUrl" type="url" placeholder="https://..."></label><label>Últimos resultados comparables (separados por comas)<textarea name="history" placeholder="32, 18, 60, 27, 15 — opcional; misma estadística y mismas reglas"></textarea></label><label>Probabilidad predictiva externa o propia (%) — opcional<input name="modelProb" type="number" min="0.1" max="99.9" step="any" placeholder="Solo si hay modelo documentado"></label><label>Fuente / método de la probabilidad<input name="modelSource" placeholder="Modelo, fecha, supuestos y fuente"></label><label>Información cualitativa (lesiones, rol, alineación, rival)<textarea name="qualNotes" placeholder="Documenta lo verificado y lo pendiente"></textarea></label><div class="check-row"><input type="checkbox" name="confirmedMarket" id="uniConfirmed"><label for="uniConfirmed">Confirmé que jugador, partido, estadística, línea y cuota corresponden al mismo mercado</label></div><div class="check-row"><input type="checkbox" name="confirmedRole" id="uniRole"><label for="uniRole">Verifiqué participación, lesiones, alineación o rol con información reciente</label></div><div class="check-row"><input type="checkbox" name="confirmedSource" id="uniSource"><label for="uniSource">Documenté fuentes y supuestos de los datos estadísticos</label></div><div class="actions"><button class="primary" type="submit">Analizar y guardar en Radar</button><button class="secondary" type="reset">Limpiar captura</button></div></form><div id="universalResult" aria-live="polite"></div></div><div class="card"><h2>Decisiones de la jornada</h2><p class="muted">Tres secciones operativas. Una propuesta principal NO equivale a una apuesta ejecutada ni a una probabilidad validada. Las reservas pasan por una segunda revisión documentada.</p><div class="decision-grid"><div class="decision-tile"><strong id="countMain">0</strong><span>Propuestas principales</span></div><div class="decision-tile"><strong id="countReserve">0</strong><span>Condicionales y reservas</span></div><div class="decision-tile"><strong id="countReject">0</strong><span>No aprobados</span></div></div><div id="opportunities"></div></div><div class="card"><h2>Agregar oportunidad</h2><form id="opForm" class="stack"><label>Fecha del evento<input name="date" type="date" required></label><label>Deporte<select name="sport"><option>MLB</option><option>NFL</option><option>NCAAF</option><option>NCAA</option><option>NBA</option><option>Baloncesto europeo</option><option>NHL</option><option>Tenis</option><option>Fútbol</option></select></label><label>Partido<input name="event" required></label><label>Mercado exacto<input name="market" required></label><label>Cuota decimal<input name="odds" type="number" step=".01" min="1.01"></label><label>Probabilidad propia validada (%)<input name="prob" type="number" step=".1" min=".1" max="99.9"></label><label>Fuentes<input name="sources" placeholder="Covers, Pickswise, GameRead"></label><label>Calificación<select name="grade"><option value="">Sin calificar</option><option>A</option><option>A-</option><option>B+</option><option>B</option><option>C+</option><option>C</option><option>D</option></select></label><label>URL de fuente<input name="sourceUrl" type="url" placeholder="https://..."></label><label>Sección de decisión<select name="decision"><option value="pendiente">Pendiente de clasificar</option><option value="principal">Propuestas principales</option><option value="reserva">Condicionales y reservas</option><option value="no_aprobado">No aprobados</option></select></label><label>Estado<select name="stage"><option value="detectado">Detectado</option><option value="analisis">En análisis</option><option value="validado">Validado</option><option value="descartado">Descartado</option></select></label><label>Notas<textarea name="notes"></textarea></label><label>Resultado observado (no afecta ROI)<select name="outcome"><option value="">Sin resolver</option><option value="ganado">Acertó</option><option value="perdido">Falló</option><option value="nulo">Push</option></select></label><button class="primary" type="submit">Guardar oportunidad</button></form></div></section>
+<section class="page" id="evaluar"><h1>Evaluador de valor</h1><div class="card"><div class="stack"><label>Cuota decimal<input id="calcOdds" type="number" value="1.66" min="1.01" step=".01"></label><label>Probabilidad propia estimada (%)<input id="calcProb" type="number" placeholder="No usar hit rate como proyección" min=".1" max="99.9" step=".1"></label><div class="grid"><div><small>Probabilidad implícita</small><div class="metric" id="implied">—</div></div><div><small>Edge</small><div class="metric" id="edge">—</div></div><div><small>EV</small><div class="metric" id="ev">—</div></div><div><small>Cuota justa</small><div class="metric" id="fair">—</div></div></div></div></div><div class="notice">Una probabilidad propia necesita modelo y evidencia. EV positivo no garantiza ganancia.</div></section>
+<section class="page" id="registro"><h1>Registrar pick</h1><div class="card"><form id="pickForm" class="stack"><label>Fecha<input name="date" type="date" required></label><label>Deporte<select name="sport"><option>MLB</option><option>NFL</option><option>NCAAF</option><option>NCAA</option><option>NBA</option><option>Baloncesto europeo</option><option>Otro</option></select></label><label>Partido<input name="event" required></label><label>Selección<input name="market" required></label><label>Cuota decimal<input name="odds" type="number" min="1.01" step=".01"></label><label>Casa de apuestas<input name="book" placeholder="Stake, bet365..."></label><label>Unidades apostadas<input name="units" type="number" min=".01" step=".01"></label><label>Resultado<select name="status"><option value="pendiente">Pendiente</option><option value="ganado">Ganado</option><option value="perdido">Perdido</option><option value="nulo">Nulo</option></select></label><label>Notas<textarea name="notes"></textarea></label><button class="primary" type="submit">Guardar pick</button></form></div></section>
+<section class="page" id="parlays"><h1>Tickets parlay</h1><div class="notice">Cada ticket cuenta una sola vez en utilidad y ROI. Las piernas se registran para seguimiento; sus resultados no generan apuestas adicionales.</div><div class="card"><h2>Registrar parlay ejecutado</h2><form id="parlayForm" class="stack"><label>Fecha del ticket<input name="date" type="date" required></label><label>Casa de apuestas<input name="book" placeholder="Stake" required></label><label>Referencia del ticket (opcional)<input name="reference" placeholder="ID privado del ticket"></label><div class="grid"><label>Cuota combinada real<input name="odds" type="number" step="any" min="1.01" required></label><label>Unidades totales apostadas<input name="units" type="number" step="any" min="0.01" required></label></div><label>Estado del ticket<select name="status"><option value="pendiente">Pendiente</option><option value="ganado">Ganado</option><option value="perdido">Perdido</option><option value="nulo">Anulado / reembolsado</option></select></label><h2>Selecciones del parlay</h2><div id="parlayLegs"></div><div class="actions"><button type="button" class="secondary" id="addParlayLeg">+ Añadir selección</button></div><label>Notas<textarea name="notes" placeholder="Cuota y unidades corresponden al ticket completo"></textarea></label><button class="primary" type="submit">Guardar ticket parlay</button></form></div><div class="card"><h2>Parlays registrados</h2><div id="parlayList"></div></div></section><section class="page" id="historico"><h1>Histórico de investigaciones</h1><p class="muted">Este nuevo espacio comienza el 12/oct/2026. Los datos de versiones anteriores no se importan automáticamente. El resultado reportado no equivale a una apuesta registrada.</p><div class="card"><div class="filters"><label>Fecha<input type="date" id="histDate"></label><label>Deporte<select id="histSport"><option value="">Todos</option><option>NCAAF</option><option>NFL</option><option>MLB</option><option>NBA</option><option>WNBA</option><option>Otro</option></select></label><label>Resultado<select id="histOutcome"><option value="">Todos</option><option value="ganado">Verdes</option><option value="perdido">Rojos</option><option value="nulo">Push</option><option value="pendiente">Sin resolver</option></select></label></div><div class="actions"><button class="secondary" id="histClear" type="button">Quitar filtros</button></div><p class="tiny" id="histCount"></p></div><div class="card" id="histItems"></div></section><section class="page" id="datos"><h1>Datos y respaldos</h1><div class="card"><h2>Exportar respaldo</h2><p class="muted">Guarda el JSON en Archivos. Puedes recuperarlo al cambiar de versión o dispositivo.</p><div class="actions"><button class="primary" id="export">Exportar JSON</button><button class="secondary" id="exportCSV">Exportar CSV</button></div></div><div class="card"><h2>Importar respaldo</h2><p class="muted">Fusionar conserva registros existentes y agrega IDs nuevos. Reemplazar sobrescribe los datos actuales.</p><label>Seleccionar archivo JSON<input id="import" type="file" accept=".json,application/json"></label><label>Modo de importación<select id="importMode"><option value="merge">Fusionar (recomendado)</option><option value="replace">Reemplazar todo</option></select></label></div><div class="card"><h2>Exportar Radar</h2><p class="muted">Comparte oportunidades de investigación en CSV, separado de apuestas reales.</p><button class="secondary" id="exportRadarCSV">Exportar Radar CSV</button></div><div class="card" id="cloudPanel"><h2>☁ Sincronización Supabase · v1.0</h2><p class="muted">Nuevo inicio: 12/oct/2026. Solo se muestran investigaciones desde esa fecha. El Radar público se actualiza cuando un administrador publica investigaciones en Supabase. Tus picks locales permanecen intactos. Para sincronizar datos privados, inicia sesión y utiliza las opciones de respaldo en nube.</p><div class="stack"><label>URL del proyecto Supabase<input id="sbUrl" type="url" placeholder="https://tu-proyecto.supabase.co" autocomplete="off"></label><label>Clave pública (publishable / anon)<input id="sbKey" type="text" placeholder="sb_publishable_... o clave anon" autocomplete="off"></label><div class="actions"><button class="primary" id="sbConnect" type="button">Guardar conexión y actualizar Radar</button><button class="secondary" id="sbRefresh" type="button">Actualizar Radar ahora</button></div><div id="sbStatus" class="notice" aria-live="polite">Sin configurar. El modo local sigue disponible.</div><div class="grid"><label>Correo electrónico<input id="sbEmail" type="email" placeholder="correo@ejemplo.com" autocomplete="email"></label><label>Contraseña<input id="sbPassword" type="password" autocomplete="current-password" placeholder="Mínimo 6 caracteres"></label></div><div class="actions"><button class="secondary" id="sbSignup" type="button">Crear cuenta</button><button class="secondary" id="sbLogin" type="button">Iniciar sesión</button><button class="secondary" id="sbLogout" type="button">Cerrar sesión</button></div><div class="actions"><button class="primary" id="sbPush" type="button">Guardar copia privada en nube</button><button class="secondary" id="sbPull" type="button">Recuperar copia privada</button></div><p class="tiny">La recuperación fusiona IDs nuevos; si hay IDs existentes con cambios distintos, no los sobrescribe. Para restaurar versiones anteriores conserva también tu respaldo JSON. Nunca introduzcas una clave service_role o secret en esta pantalla.</p></div></div><div class="card"><h2>Diagnóstico</h2><div id="diag" class="muted"></div></div><div class="notice">Al abrir HTML desde Archivos en iPhone, iOS puede impedir la persistencia o las descargas. Si el diagnóstico indica almacenamiento temporal, exporta los datos al terminar. Para uso confiable a largo plazo prepararemos una PWA servida por HTTPS.</div></section>
+</main><div id="betModal" class="pick-modal hidden"><div class="card"><div class="row"><h2>Registrar apuesta del Radar</h2><button class="secondary" type="button" id="betClose">Cerrar</button></div><p class="muted" id="betMarket"></p><form id="betLinkForm" class="stack"><label>Casa de apuestas<input name="book" required placeholder="Stake"></label><label>Mercado ejecutado (permite línea distinta)<input name="market" required></label><div class="grid"><label>Cuota decimal real<input name="odds" type="number" min="1.01" step="any" required></label><label>Unidades apostadas<input name="units" type="number" min="0.01" step="any" required></label></div><label>Resultado<select name="status"><option value="pendiente">Pendiente</option><option value="ganado">Ganado</option><option value="perdido">Perdido</option><option value="nulo">Nulo</option></select></label><label>Notas<textarea name="notes" placeholder="Número de ticket opcional, circunstancias..."></textarea></label><button class="primary" type="submit">Confirmar apuesta ejecutada</button></form></div></div><nav id="tabs"><button class="active" data-target="inicio"><span>▦</span>Inicio</button><button data-target="radar"><span>◈</span>Radar</button><button data-target="evaluar"><span>◎</span>Evaluar</button><button data-target="registro"><span>＋</span>Picks</button><button data-target="parlays"><span>⛓</span>Parlays</button><button data-target="historico"><span>◷</span>Histórico</button><button data-target="datos"><span>⚙</span>Datos</button></nav>
+<script>
+(function(){
+"use strict";
+var KEY="juande-mobile-reset-20261012-v1"; // Nuevo espacio de datos: no importa registros de versiones anteriores.
+var $=function(id){return document.getElementById(id)};
+var START_DATE="2026-10-12";
+var cloudFeed=[]; // Disponible antes de inicializar el formulario de parlays
+var seed={version:5,startedAt:START_DATE,picks:[],opportunities:[],parlays:[],skippedRadar:{}};
+var db=JSON.parse(JSON.stringify(seed));var storage=false;
+try{var raw=window.localStorage.getItem(KEY);if(raw){var obj=JSON.parse(raw);if(obj&&Array.isArray(obj.picks)&&Array.isArray(obj.opportunities))db=obj;}window.localStorage.setItem(KEY,JSON.stringify(db));storage=true}catch(err){storage=false}
+function save(){try{window.localStorage.setItem(KEY,JSON.stringify(db));storage=true}catch(err){storage=false}updateMode()}
+function updateMode(){$("mode").textContent=storage?"LOCAL":"TEMPORAL";$("diag").textContent=storage?"Almacenamiento local disponible en este contexto. Aun así, realiza respaldos.":"Almacenamiento bloqueado: los cambios pueden perderse al cerrar. Exporta respaldo JSON."}
+function esc(x){return String(x==null?"":x).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function num(v){return v===""||v==null?null:Number(v)}
+function nav(page){var pages=document.querySelectorAll(".page");for(var i=0;i<pages.length;i++)pages[i].classList.toggle("active",pages[i].id===page);var bs=document.querySelectorAll("#tabs button");for(var j=0;j<bs.length;j++)bs[j].classList.toggle("active",bs[j].getAttribute("data-target")===page);window.scrollTo(0,0)}
+$("tabs").addEventListener("click",function(e){var b=e.target.closest("button[data-target]");if(b)nav(b.getAttribute("data-target"))});
+function render(){renderParlays();var executed=db.picks.filter(function(x){return x.execution!=="omitida"});$("m-executed").textContent=executed.length;$("m-skipped").textContent=Object.keys(db.skippedRadar||{}).length;$("m-pending").textContent=executed.filter(function(x){return x.status==="pendiente"}).length;$("m-research").textContent=cloudMerged().filter(function(x){return ["ganado","perdido","nulo"].includes(x.outcome)}).length;var resolved=executed.filter(function(x){return x.status==="ganado"||x.status==="perdido"});var won=resolved.filter(function(x){return x.status==="ganado"});$("m-resueltos").textContent=resolved.length;$("m-win").textContent=resolved.length?(100*won.length/resolved.length).toFixed(1)+"%":"—";
+var priced=executed.filter(function(x){return (x.status==="ganado"||x.status==="perdido"||x.status==="nulo")&&num(x.odds)>1&&num(x.units)>0});var risk=0,profit=0,series=[0];priced.forEach(function(x){var u=Number(x.units),gain=x.status==="ganado"?u*(Number(x.odds)-1):x.status==="perdido"?-u:0;risk+=u;profit+=gain;series.push(profit)});$("m-profit").textContent=risk?(profit>=0?"+":"")+profit.toFixed(2)+" U":"—";$("m-roi").textContent=risk?(100*profit/risk).toFixed(1)+"%":"—";
+$("history").innerHTML=db.picks.map(function(x){return '<div class="item"><b>'+esc(x.market)+'</b><div class="muted">'+esc(x.date)+' · '+esc(x.sport)+' · '+esc(x.status)+' · '+esc(x.event)+'</div><div class="muted">'+esc(x.notes)+'</div></div>'}).join("")||'<p class="muted">Sin registros.</p>';
+renderRadar();renderHistorico();$("chart").innerHTML=risk?makeChart(series):'<p class="muted">La gráfica aparecerá cuando registremos picks resueltos con cuota e importe verificables.</p>';
+}
+
+function uniqueKey(x){return [x.date,x.sport,x.event,x.market].map(function(v){return String(v||"").trim().toLowerCase()}).join("|")}
+
+var pendingBatch=null;
+function normalizedBatch(raw){
+ var rows=Array.isArray(raw)?raw:(raw&&Array.isArray(raw.opportunities)?raw.opportunities:null);
+ if(!rows)throw Error("El JSON debe ser una lista o contener opportunities: [...]");
+ if(!rows.length)throw Error("El lote está vacío");
+ if(rows.length>150)throw Error("Máximo 150 candidatos por lote");
+ var result=[],seen={};
+ rows.forEach(function(x,i){
+  if(!x||typeof x!=="object"||Array.isArray(x))throw Error("Registro "+(i+1)+" inválido");
+  var date=String(x.date||"").trim(),sport=String(x.sport||"").trim(),event=String(x.event||"").trim(),market=String(x.market||"").trim();
+  if(!/^\d{4}-\d{2}-\d{2}$/.test(date)||!sport||!event||!market)throw Error("Registro "+(i+1)+": requiere date (AAAA-MM-DD), sport, event y market");
+  if([sport,event,market].some(function(v){return v.length>250}))throw Error("Registro "+(i+1)+": texto demasiado largo");
+  var odds=x.odds==null||x.odds===""?null:Number(x.odds),prob=x.prob==null||x.prob===""?null:Number(x.prob);
+  if(odds!==null&&(!isFinite(odds)||odds<=1||odds>1000))throw Error("Registro "+(i+1)+": cuota inválida");
+  if(prob!==null&&(!isFinite(prob)||prob<=0||prob>=100))throw Error("Registro "+(i+1)+": probabilidad inválida");
+  var stage=["detectado","analisis","validado","descartado"].indexOf(x.stage)>=0?x.stage:"detectado";
+  var grade=["A","A-","B+","B","C+","C","D"].indexOf(x.grade)>=0?x.grade:"";
+  var outcome=["ganado","perdido","nulo"].indexOf(x.outcome)>=0?x.outcome:"";
+  var y={id:"batch-"+date+"-"+i+"-"+Date.now(),date:date,sport:sport,event:event,market:market,odds:odds,prob:prob,sources:String(x.sources||"").slice(0,500),grade:grade,stage:stage,outcome:outcome,sourceUrl:/^https:\/\/[a-z0-9.-]+(?:[/:?#]|$)/i.test(x.sourceUrl||"")?String(x.sourceUrl).slice(0,1200):"",notes:String(x.notes||"").slice(0,3000)};
+  var key=uniqueKey(y);if(!seen[key]){seen[key]=true;result.push(y)}
+ });
+ return result;
+}
+function clearBatch(){pendingBatch=null;$("batchFile").value="";$("batchApply").disabled=true;$("batchPreview").textContent="Sin lote seleccionado."}
+$("batchCancel").addEventListener("click",clearBatch);
+$("batchFile").addEventListener("change",function(e){
+ var f=e.target.files[0];pendingBatch=null;$("batchApply").disabled=true;
+ if(!f){clearBatch();return}
+ if(f.size>1000000){$("batchPreview").textContent="Archivo demasiado grande (máximo 1 MB).";return}
+ var reader=new FileReader();
+ reader.onload=function(){try{
+  var rows=normalizedBatch(JSON.parse(reader.result));
+  var existing={};db.opportunities.forEach(function(x){existing[uniqueKey(x)]=true});
+  var fresh=rows.filter(function(x){return !existing[uniqueKey(x)]});
+  pendingBatch=fresh;
+  $("batchPreview").innerHTML="<b>"+rows.length+" candidatos válidos · "+fresh.length+" nuevos · "+(rows.length-fresh.length)+" repetidos</b><div class='tiny'>"+rows.slice(0,12).map(function(x){return esc(x.date+" · "+x.sport+" · "+x.event+" · "+x.market)}).join("<br>")+"</div><p class='tiny'>Solo se agregarán nuevos candidatos. Los registros existentes no serán sobrescritos.</p>";
+  $("batchApply").disabled=!fresh.length;
+ }catch(err){$("batchPreview").textContent="Error: "+err.message}};
+ reader.onerror=function(){$("batchPreview").textContent="No se pudo leer el archivo."};
+ reader.readAsText(f);
+});
+$("batchApply").addEventListener("click",function(){
+ if(!pendingBatch||!pendingBatch.length)return;
+ var count=pendingBatch.length;
+ if(!confirm("¿Agregar "+count+" candidatos al Radar sin modificar tus registros existentes?"))return;
+ mergeRows(db.opportunities,pendingBatch);save();render();clearBatch();alert(count+" candidatos procesados. Revisa el Radar.");
+});
+
+function mergeRows(oldRows,newRows){var ids={},keys={};oldRows.forEach(function(x){if(x.id)ids[x.id]=true;keys[uniqueKey(x)]=true});newRows.forEach(function(x){if(!x||typeof x!=="object")return;var k=uniqueKey(x);if((x.id&&ids[x.id])||keys[k])return;oldRows.push(x);if(x.id)ids[x.id]=true;keys[k]=true});return oldRows}
+var sampleJornada=[
+{id:"radar-20261009-iowastate",date:"2026-10-09",sport:"NCAAF",event:"Iowa State vs BYU",market:"Iowa State +11.0",odds:1.85,prob:null,sources:"Covers, Pickswise, Action Network; Stake.mx (cuota reportada por usuario)",grade:"B",stage:"analisis",outcome:"",sourceUrl:"https://www.covers.com/picks",notes:"Condicional. Mejor línea que +10.5 publicado; lesión y disponibilidad requieren revisión. EV NO determinado. Cuota reportada, no verificada en vivo."},
+{id:"radar-20261009-iowa",date:"2026-10-09",sport:"NCAAF",event:"Iowa vs Washington",market:"Iowa +4.0",odds:1.65,prob:null,sources:"Pickswise, Covers, Action Network; Stake.mx (cuota reportada por usuario)",grade:"B",stage:"analisis",outcome:"",sourceUrl:"https://www.pickswise.com/",notes:"Condicional. Desacuerdo entre analistas; revisar disponibilidad del quarterback. EV NO determinado. Cuota reportada, no verificada en vivo."},
+{id:"radar-20261009-fsu",date:"2026-10-09",sport:"NCAAF",event:"Florida State vs Louisville",market:"Over 59.5 puntos",odds:1.82,prob:null,sources:"Pickswise, Covers, DRatings; Stake.mx (cuota reportada por usuario)",grade:"C+",stage:"descartado",outcome:"",sourceUrl:"https://www.covers.com/picks",notes:"Descartado por ahora: proyecciones próximas al mercado; no hay edge positivo demostrado. Cuota reportada, no verificada en vivo."}
+];
+// Clasificación inicial SOLO de los diez mercados discutidos. No altera picks ni estadísticas.
+var initialDecisions=[
+ ["Jojo Phillips","principal","Principal preliminar. 4 partidos: 2,1,2,1 recepciones; cuota de referencia 1.71. Pendiente validación de mercado vigente y de modelo independiente."],
+ ["Lincoln Kienholz","reserva","Segunda revisión: confirmar disponibilidad física, snaps y distribución de acarreos, yardas por partido y cuota vigente."],
+ ["Legend Glasker","reserva","Segunda revisión: participación ofensiva, targets y variabilidad; verificar línea y cuota."],
+ ["Ousmane Kromah","reserva","Segunda revisión: rol en zona roja, volumen de oportunidades y dependencia del guion."],
+ ["Pauline Astier","reserva","Segunda revisión: minutos, rol y tendencia reciente de asistencias; confirmar cuota ejecutable."],
+ ["Chelsea Gray","reserva","Segunda revisión: minutos, lesiones y distribución de asistencias; verificar cuota."],
+ ["Angel Reese","reserva","Segunda revisión: minutos, matchup de rebotes y precio real disponible."],
+ ["Duce Robinson","no_aprobado","Línea incompatible: Radar Under 39.5 vs fuente Under 92.5; no trasladar probabilidad."],
+ ["Jabari Bates","no_aprobado","Línea incompatible: Radar Over 29.5 vs fuente Over 39.5; no trasladar probabilidad."],
+ ["Gabby Williams","no_aprobado","Cuota ejecutable y proyección independiente insuficientemente contrastadas."]
+];
+function assignInitialDecisions(){
+ var changed=false;
+ db.opportunities.forEach(function(x){
+  if(x.decision)return;
+  if(x.date!=="2026-10-09")return;
+  var found=initialDecisions.find(function(t){return String(x.market||"").toLowerCase().indexOf(t[0].toLowerCase())>=0});
+  if(found){x.decision=found[1];x.reviewReason=found[2];x.reviewHistory=x.reviewHistory||[];changed=true}
+ });
+ if(changed)save();
+}
+function sectionOf(x){return ["principal","reserva","no_aprobado"].indexOf(x.decision)>=0?x.decision:"pendiente"}
+function parseHistory(value){
+ if(!value||!String(value).trim())return [];
+ var parts=String(value).split(/[;,\n]+/).map(function(v){return v.trim()});
+ if(parts.length>150||parts.some(function(v){return !v||!isFinite(Number(v))}))throw Error("Histórico: usa hasta 150 números separados por coma, punto y coma o salto de línea.");
+ return parts.map(Number);
+}
+function extractLine(market){var m=String(market||"").match(/(?:Over|Under|Más de|Menos de|[+-])\s*([+-]?\d+(?:\.\d+)?)/i);return m?Number(m[1]):null}
+function replaceMarketLine(market,newLine){var str=String(market||"");if(/(?:Over|Under|Más de|Menos de)\s*[+-]?\d+(?:\.\d+)?/i.test(str))return str.replace(/((?:Over|Under|Más de|Menos de)\s*)[+-]?\d+(?:\.\d+)?/i,"$1"+newLine);if(/\s[+-]\d+(?:\.\d+)?/.test(str))return str.replace(/\s[+-]\d+(?:\.\d+)?/," "+(newLine>=0?"+":"")+newLine);return str+" [línea "+newLine+"]"}
+function assessMarket(v){
+ var odds=num(v.odds),line=num(v.line),hist=Array.isArray(v.history)?v.history:[],market=String(v.market||""),direction=/\bUnder\b/i.test(market)?"under":/\bOver\b/i.test(market)?"over":"other";
+ var prob=num(v.modelProb),hasModel=prob>0&&prob<100&&!!String(v.modelSource||"").trim(),verified=!!v.marketVerified,role=!!v.roleVerified,source=!!v.sourceVerified;
+ var implied=odds>1?100/odds:null,win=null,push=null,avg=null,sd=null;
+ if(hist.length){avg=hist.reduce(function(a,b){return a+b},0)/hist.length;sd=hist.length>1?Math.sqrt(hist.reduce(function(a,b){return a+Math.pow(b-avg,2)},0)/(hist.length-1)):null}
+ if(hist.length&&line!==null&&(direction==="over"||direction==="under")){
+  var hits=hist.filter(function(n){return direction==="over"?n>line:n<line}).length;
+  var ties=hist.filter(function(n){return n===line}).length;
+  win=100*hits/hist.length;push=ties;
+ }
+ var ev=hasModel&&implied!==null?(prob/100*odds-1)*100:null;
+ var evStress=hasModel&&implied!==null?(Math.max(0,prob-5)/100*odds-1)*100:null;
+ var missing=[];if(!verified)missing.push("mercado y cuota no verificados");if(!role)missing.push("rol, lesiones o alineación sin verificar");if(!source)missing.push("fuentes y supuestos sin verificar");if(!hasModel)missing.push("sin probabilidad predictiva documentada");if(hist.length<10)missing.push("histórico comparable escaso o ausente");
+ // Conservative screening: no high grades from user-entered model probability alone.
+ var grade="C",decision="reserva";
+ if(!odds||odds<=1){grade="D";decision="no_aprobado"}
+ else if(hasModel&&ev!==null&&ev<=0){grade="D";decision="no_aprobado"}
+ else if(hasModel&&evStress!==null&&evStress<=0){grade="C";decision="reserva"}
+ else if(hasModel&&verified&&source&&role&&hist.length>=10&&evStress>=5){grade="B+";decision="reserva"}
+ else if(hasModel&&verified&&source&&evStress>=5){grade="B";decision="reserva"}
+ else if(verified&&hist.length>=10&&win!==null){grade="B";decision="reserva"}
+ return {grade:grade,decision:decision,implied:implied,frequency:win,historyCount:hist.length,pushCount:push,mean:avg,sd:sd,modelProb:hasModel?prob:null,ev:ev,evStress:evStress,missing:missing,method:"Cribado local descriptivo; sin modelo independiente calibrado ni datos en vivo",generatedAt:new Date().toISOString()};
+}
+function renderAssessment(r){
+ function fmt(v,suffix){return v===null||!isFinite(v)?"No calculable":Number(v).toFixed(2)+(suffix||"")}
+ return '<div class="analysis-box"><b>Resultado de evaluación local</b><div class="analysis-grid"><div><small>Calificación preliminar</small><b>'+esc(r.grade)+'</b></div><div><small>Bucket sugerido</small><b>'+esc(r.decision==="reserva"?"Condicionales":r.decision==="principal"?"Principales":"No aprobados")+'</b></div><div><small>Prob. de equilibrio</small><b>'+fmt(r.implied,"%")+'</b></div><div><small>Histórico comparable</small><b>'+r.historyCount+' registros</b></div><div><small>Frecuencia histórica</small><b>'+fmt(r.frequency,"%")+'</b></div><div><small>EV según prob. aportada</small><b>'+fmt(r.ev,"%")+'</b></div><div><small>EV con −5 pp</small><b>'+fmt(r.evStress,"%")+'</b></div><div><small>Media histórica</small><b>'+fmt(r.mean)+'</b></div></div><p class="tiny">'+esc(r.method)+'. Las probabilidades introducidas por usuarios NO quedan validadas por la aplicación. No se asigna automáticamente grado A ni aprobación definitiva.</p><b>Verificaciones pendientes</b><p class="tiny">'+esc(r.missing.length?r.missing.join("; "):"Comprobaciones declaradas; aún requiere auditoría independiente")+'</p></div>';
+}
+function uniqueNewId(){return "user-"+Date.now()+"-"+Math.random().toString(36).slice(2,9)}
+$("universalForm").addEventListener("submit",function(e){
+ e.preventDefault();try{
+ var f=this,v=formObj(f),date=v.date,event=String(v.event||"").trim(),subject=String(v.subject||"").trim(),stat=String(v.stat||"").trim(),kind=v.kind;
+ if(!date||!event||!v.sport)throw Error("Falta fecha, evento o deporte.");
+ if((kind==="player"||kind==="spread"||kind==="moneyline")&&!subject)throw Error("Indica el jugador o equipo seleccionado.");
+ var lineText=String(v.line||"").trim(),line=lineText===""?null:Number(lineText),odds=Number(v.odds);
+ if((kind==="player"||kind==="total"||kind==="spread")&&line===null)throw Error("Indica la línea exacta del mercado.");
+ if(line!==null&&!isFinite(line))throw Error("Línea inválida.");if(!isFinite(odds)||odds<=1||odds>1000)throw Error("Cuota inválida.");
+ var market=(subject?subject+" ":"")+(kind==="moneyline"?"gana":v.direction+" "+(line===null?"":line)+" "+stat).trim();
+ var history=parseHistory(v.history),mp=String(v.modelProb||"").trim(),modelProb=mp===""?null:Number(mp);
+ if(modelProb!==null&&(!isFinite(modelProb)||modelProb<=0||modelProb>=100))throw Error("Probabilidad inválida.");
+ var assessment=assessMarket({market:market,line:line,odds:odds,history:history,modelProb:modelProb,modelSource:v.modelSource,marketVerified:$("uniConfirmed").checked,roleVerified:$("uniRole").checked,sourceVerified:$("uniSource").checked});
+ var x={id:uniqueNewId(),date:date,sport:v.sport,event:event,market:market,odds:odds,prob:null,sources:((v.book||"")+"; "+(v.modelSource||"")).slice(0,500),book:v.book||"",grade:assessment.grade,stage:"analisis",decision:assessment.decision,outcome:"",sourceUrl:v.sourceUrl||"",notes:v.qualNotes||"",reviewReason:"Evaluación local preliminar; "+assessment.missing.join("; "),historyValues:history,modelProbabilityReported:modelProb,modelSource:v.modelSource||"",localAssessment:assessment,reviewHistory:[{date:new Date().toISOString(),from:"captura",to:assessment.decision,evidence:v.qualNotes||"",conclusion:"Evaluación local preliminar",assessment:assessment}]};
+ var existing=db.opportunities.some(function(y){return uniqueKey(y)===uniqueKey(x)});if(existing)throw Error("Este mercado ya existe en el Radar. Usa Segunda revisión para actualizarlo.");
+ db.opportunities.unshift(x);save();render();$("universalResult").innerHTML=renderAssessment(assessment)+'<p class="notice">Guardado en Radar. Esta evaluación NO ha consultado fuentes en tiempo real y no constituye aprobación automática.</p>';
+ alert("Candidato guardado en Radar con calificación preliminar "+assessment.grade+".");
+ }catch(err){alert("No se pudo evaluar: "+err.message)}
+});
+function localToday(){var parts=new Intl.DateTimeFormat("en-CA",{timeZone:"America/Monterrey",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date());var o={};parts.forEach(function(x){o[x.type]=x.value});return o.year+"-"+o.month+"-"+o.day}
+function isRadarVigente(x){var today=localToday();return !!x.date&&x.date>=today&&!["ganado","perdido","nulo"].includes(x.outcome||"")&&x.stage!=="descartado"}
+function renderHistorico(){var a=cloudMerged().filter(function(x){return !isRadarVigente(x)}).sort(function(a,b){return (b.date||"").localeCompare(a.date||"")});var d=$("histDate").value,sp=$("histSport").value,o=$("histOutcome").value;a=a.filter(function(x){return (!d||x.date===d)&&(!sp||x.sport===sp)&&(!o||(o==="pendiente"?!x.outcome:x.outcome===o))});$("histCount").textContent=a.length+" investigaciones históricas";var byDate={};a.forEach(function(x){var day=x.date||"Sin fecha";(byDate[day]||(byDate[day]=[])).push(x)});$("histItems").innerHTML=Object.keys(byDate).sort().reverse().map(function(day){return '<div class="decision-section"><h3>'+esc(day)+' ('+byDate[day].length+')</h3></div>'+byDate[day].map(function(x){var outcome=x.outcome||"pendiente",cls=outcome==="ganado"?"yes":outcome==="perdido"?"no":"warn";return '<div class="item"><div class="row"><b>'+esc(x.market)+'</b><span class="pill '+cls+'">'+esc(outcome)+'</span></div><div class="muted">'+esc(x.sport)+' · '+esc(x.event)+'</div><div class="muted">Calificación original: '+esc(x.grade||"Sin calificar")+' · Cuota: '+esc(x.odds??"—")+'</div><div class="muted">Fuente: '+esc(x.sources||"—")+'</div><div class="tiny">'+esc(x.notes||"")+'</div></div>'}).join("")}).join("")||'<p class="muted">Sin registros para estos filtros.</p>'}
+["histDate","histSport","histOutcome"].forEach(function(id){$(id).addEventListener("change",renderHistorico)});$("histClear").addEventListener("click",function(){["histDate","histSport","histOutcome"].forEach(function(id){$(id).value=""});renderHistorico()});
+function renderRadar(){
+
+ var fd=$("filterDate").value,fs=$("filterSport").value,ft=$("filterStage").value,fg=$("filterGrade").value,dec=$("filterDecision").value;
+ var allRadar=cloudMerged().filter(isRadarVigente);var gradeRank={"A":0,"A-":1,"B+":2,"B":3,"B-":4,"C+":5,"C":6,"D":7};allRadar.sort(function(a,b){return (b.date||"").localeCompare(a.date||"")||(gradeRank[a.grade]??9)-(gradeRank[b.grade]??9)||(a.market||"").localeCompare(b.market||"")});var rows=allRadar.filter(function(x){return (!fd||x.date===fd)&&(!fs||x.sport===fs)&&(!ft||x.stage===ft)&&(!fg||(fg==="Sin calificar"?!x.grade:x.grade===fg))&&(!dec||sectionOf(x)===dec)});
+ $("radarCount").textContent=rows.length+" de "+allRadar.length+" candidatos";
+ $("countMain").textContent=rows.filter(function(x){return sectionOf(x)==="principal"}).length;
+ $("countReserve").textContent=rows.filter(function(x){return sectionOf(x)==="reserva"}).length;
+ $("countReject").textContent=rows.filter(function(x){return sectionOf(x)==="no_aprobado"}).length;
+ function card(x){
+  var isCloud=!!x.cloudSourceId;
+  var imp=num(x.odds)>1?(100/Number(x.odds)).toFixed(2)+"%":"—";
+  var ev=num(x.prob)>0&&num(x.odds)>1?((Number(x.odds)*Number(x.prob)/100-1)*100).toFixed(2)+"%":"No determinado";
+  var cls=sectionOf(x)==="no_aprobado"?"no":sectionOf(x)==="principal"?"yes":"warn";
+  var url=/^https:\/\/[a-z0-9.-]+(?:[/:?#]|$)/i.test(x.sourceUrl||"")?'<a target="_blank" rel="noopener noreferrer" href="'+esc(x.sourceUrl)+'">Abrir fuente ↗</a>':"";
+  var history=Array.isArray(x.reviewHistory)?x.reviewHistory:[];var linked=db.picks.filter(function(p){return p.radarId===x.id||p.radarSourceId===(x.cloudSourceId||x.id)});var skipped=!!(db.skippedRadar&&db.skippedRadar[x.cloudSourceId||x.id]);var actionButtons='<div class="pick-flag">'+(linked.length?linked.length+" apuesta(s) registrada(s) · "+linked.map(function(p){return esc(p.status)}).join(", "):skipped?"No apostada":"Sin decisión de apuesta")+'</div><div class="actions"><button class="primary" type="button" data-bet="'+esc(x.id)+'">Registrar apuesta</button><button class="secondary" type="button" data-skip="'+esc(x.id)+'">'+(skipped?"Reactivar":"No apostada")+'</button></div>';
+  return '<div class="item"><div class="row"><b>'+esc(x.market)+'</b><span class="pill '+cls+'">'+esc(x.grade||"Sin calificar")+' · '+esc(x.stage||"detectado")+'</span></div><div class="muted">'+esc(x.date)+' · '+esc(x.sport)+' · '+esc(x.event)+'</div><div class="muted">Cuota: '+esc(x.odds??"—")+' · Implícita: '+imp+' · EV: '+ev+'</div><div class="muted">Fuentes: '+esc(x.sources||"—")+'</div><div class="muted">'+esc(x.notes||"")+'</div><div class="tiny">Motivo de clasificación: '+esc(x.reviewReason||"No documentado")+'</div><div class="tiny">Revisiones registradas: '+history.length+' · Resultado: '+esc(x.outcome||"sin resolver")+' · '+url+'</div>'+(isCloud?'<div class="tiny">☁ Publicado en nube · Solo lectura · '+esc(x.cloudPublishedAt||'')+'</div>':'<div class="actions decision-actions"><button class="secondary" type="button" data-eval="'+esc(x.id)+'">Evaluar</button><button class="secondary" type="button" data-review="'+esc(x.id)+'">Segunda revisión</button><button class="secondary" type="button" data-edit="'+esc(x.id)+'">Editar estado</button></div>')+actionButtons+'<div data-review-box="'+esc(x.id)+'"></div></div>';
+ }
+ var sections=[
+  ["principal","1 · Propuestas principales","Prioridad para verificación final. No significa apuesta realizada."],
+  ["reserva","2 · Condicionales y reservas","Resolver dudas, documentar evidencia y decidir: principal o no aprobado."],
+  ["no_aprobado","3 · No aprobados","Conservados para seguimiento y análisis histórico."],
+  ["pendiente","Sin clasificar","Candidatos anteriores o nuevos que aún no tienen dictamen."]
+ ];
+ $("opportunities").innerHTML=sections.map(function(g){
+  var group=rows.filter(function(x){return sectionOf(x)===g[0]});
+  return '<div class="decision-section"><h3>'+g[1]+' ('+group.length+')</h3><p>'+g[2]+'</p></div>'+(group.map(card).join("")||'<p class="tiny">Sin candidatos en esta sección.</p>');
+ }).join("");
+}
+["filterDate","filterSport","filterStage","filterGrade","filterDecision"].forEach(function(id){$(id).addEventListener("change",renderRadar)});
+$("clearFilters").addEventListener("click",function(){["filterDate","filterSport","filterStage","filterGrade","filterDecision"].forEach(function(id){$(id).value=""});renderRadar()});
+$("loadJornada").addEventListener("click",function(){var before=db.opportunities.length;mergeRows(db.opportunities,sampleJornada.filter(function(x){return x.date>=START_DATE}));assignInitialDecisions();save();render();alert((db.opportunities.length-before)+" candidatos nuevos agregados. Los existentes se conservaron.")});
+var currentBetCandidate=null;
+$("betClose").addEventListener("click",function(){$("betModal").classList.add("hidden")});
+$("betLinkForm").addEventListener("submit",function(e){e.preventDefault();if(!currentBetCandidate)return;var o=formObj(this),od=num(o.odds),u=num(o.units);if(!(od>1&&u>0))return alert("Verifica cuota y unidades.");var x=currentBetCandidate;var record={id:"pick-"+Date.now()+"-"+Math.random().toString(36).slice(2,7),radarId:x.id,radarSourceId:x.cloudSourceId||x.id,date:x.date,sport:x.sport,event:x.event,market:o.market,originalMarket:x.market,book:o.book,odds:od,units:u,status:o.status,notes:o.notes||"",execution:"realizada",createdAt:new Date().toISOString()};db.picks.unshift(record);if(db.skippedRadar)delete db.skippedRadar[x.cloudSourceId||x.id];save();render();this.reset();$("betModal").classList.add("hidden");alert("Apuesta registrada. Puedes registrar más de una para la misma investigación.")});
+$("opportunities").addEventListener("click",function(e){
+ var b=e.target.closest("button");if(!b)return;
+ if(b.hasAttribute("data-bet")||b.hasAttribute("data-skip")){var key=b.getAttribute("data-bet")||b.getAttribute("data-skip");var x=cloudMerged().find(function(y){return y.id===key});if(!x)return;if(b.hasAttribute("data-skip")){db.skippedRadar=db.skippedRadar||{};var sid=x.cloudSourceId||x.id;if(db.skippedRadar[sid])delete db.skippedRadar[sid];else db.skippedRadar[sid]={date:new Date().toISOString(),market:x.market};save();render();return;}currentBetCandidate=x;$("betMarket").textContent=x.event+" · "+x.market;var f=$("betLinkForm");f.reset();f.elements.market.value=x.market;$("betModal").classList.remove("hidden");return;}
+
+ var id=b.getAttribute("data-eval")||b.getAttribute("data-edit")||b.getAttribute("data-review")||b.getAttribute("data-save-review")||b.getAttribute("data-calc-review");
+ var x=db.opportunities.find(function(y){return y.id===id});if(!x)return;
+ if(b.hasAttribute("data-eval")){$("calcOdds").value=x.odds||"";$("calcProb").value=x.prob||"";evaluate();nav("evaluar");return}
+ if(b.hasAttribute("data-edit")){
+  var v=prompt("Estado: detectado, analisis, validado, descartado",x.stage||"analisis");if(v===null)return;
+  if(["detectado","analisis","validado","descartado"].indexOf(v)<0){alert("Estado no válido");return}
+  x.stage=v;save();render();return;
+ }
+ if(b.hasAttribute("data-review")){
+  var el=document.querySelector('[data-review-box="'+id.replace(/"/g,"")+'"]');if(!el)return;
+  if(el.innerHTML){el.innerHTML="";return}
+  el.innerHTML='<div class="review-panel"><b>Segunda revisión cuantitativa y cualitativa</b><p class="tiny">Comprueba dudas con evidencia. No se calculan probabilidades automáticamente.</p><div class="analysis-grid"><label>Nueva línea<input data-review-line type="number" step="any" placeholder="Si cambia, captura línea"></label><label>Nueva cuota<input data-review-odds type="number" step="any" placeholder="Ej. 1.84"></label></div><label>Casa / fuente de la nueva cuota<input data-review-book placeholder="Stake, bet365..."></label><label>Últimos resultados comparables (opcional)<textarea data-review-history placeholder="32,18,60,27,15"></textarea></label><label>Probabilidad de modelo (%) (opcional)<input data-review-prob type="number" step="any" min="0.1" max="99.9"></label><label>Fuente del modelo y supuestos<input data-review-modelsource placeholder="No confundir frecuencia con predicción"></label><label class="check-row"><input data-review-verified type="checkbox" style="width:auto"> Mercado, línea, cuota y fuente contrastados</label><div class="actions"><button type="button" class="secondary" data-calc-review="'+esc(id)+'">Calcular revisión local</button></div><div data-review-result></div><label>Evidencia nueva / fuentes / estado de lesiones<textarea data-review-evidence placeholder="Registra estadísticas, fuentes, línea y cuota revisadas"></textarea></label><label>Dudas resueltas y riesgos pendientes<textarea data-review-notes placeholder="Qué cambió y qué dudas permanecen"></textarea></label><label>Resolución<select data-review-decision><option value="reserva">Mantener en condicionales</option><option value="principal">Trasladar a propuestas principales</option><option value="no_aprobado">Trasladar a no aprobados</option></select></label><button class="primary" type="button" data-save-review="'+esc(id)+'">Guardar revisión y clasificación</button></div>';return;
+ }
+ if(b.hasAttribute("data-calc-review")){
+  var panel=b.closest(".review-panel"), lineText=panel.querySelector("[data-review-line]").value.trim();
+  var line=lineText===""?extractLine(x.market):Number(lineText),oText=panel.querySelector("[data-review-odds]").value.trim(),odds=oText===""?num(x.odds):Number(oText);
+  var historyText=panel.querySelector("[data-review-history]").value.trim();
+  var history=historyText?parseHistory(historyText):(Array.isArray(x.historyValues)?x.historyValues:[]);
+  var mp=panel.querySelector("[data-review-prob]").value.trim();
+  var modelProb=mp===""?null:Number(mp),modelSource=panel.querySelector("[data-review-modelsource]").value.trim();
+  var checked=panel.querySelector("[data-review-verified]").checked;
+  var review=assessMarket({market:x.market,line:line,odds:odds,history:history,modelProb:modelProb,modelSource:modelSource,marketVerified:checked,roleVerified:false,sourceVerified:!!modelSource});
+  panel.querySelector("[data-review-result]").innerHTML=renderAssessment(review);
+  panel._assessment=review;
+  return;
+ }
+ if(b.hasAttribute("data-save-review")){
+  var panel=b.closest(".review-panel");
+  var evidence=panel.querySelector("[data-review-evidence]").value.trim(),notes=panel.querySelector("[data-review-notes]").value.trim(),decision=panel.querySelector("[data-review-decision]").value;
+  if(!evidence||!notes){alert("Documenta la evidencia nueva y la conclusión antes de guardar.");return}
+  if(!Array.isArray(x.reviewHistory))x.reviewHistory=[];
+  var lineInput=panel.querySelector("[data-review-line]"),oddsInput=panel.querySelector("[data-review-odds]");
+  var newLine=lineInput.value.trim(),newOdds=oddsInput.value.trim();
+  if(newLine!==""&&!isFinite(Number(newLine))){alert("Línea inválida");return}
+  if(newOdds!==""&&(!isFinite(Number(newOdds))||Number(newOdds)<=1)){alert("Cuota inválida");return}
+  var assessment=panel._assessment||null;
+  if((newLine!==""||newOdds!=="")&&!assessment){alert("Pulsa Calcular revisión local antes de guardar cambios de línea o cuota.");return}
+  var oldMarket=x.market,oldOdds=x.odds;
+  var marketVersion={date:new Date().toISOString(),market:oldMarket,odds:oldOdds,book:x.book||"",line:extractLine(oldMarket)};
+  if(!Array.isArray(x.marketHistory))x.marketHistory=[];
+  if(newLine!==""||newOdds!=="")x.marketHistory.push(marketVersion);
+  if(newLine!=="")x.market=replaceMarketLine(x.market,Number(newLine));
+  if(newOdds!=="")x.odds=Number(newOdds);
+  var book=panel.querySelector("[data-review-book]").value.trim();if(book)x.book=book;
+  var histText=panel.querySelector("[data-review-history]").value.trim();if(histText)x.historyValues=parseHistory(histText);
+  if(assessment){x.localAssessment=assessment;x.grade=assessment.grade;x.prob=null;}
+  x.reviewHistory.push({date:new Date().toISOString(),from:sectionOf(x),to:decision,evidence:evidence,conclusion:notes,marketBefore:marketVersion,marketAfter:{market:x.market,odds:x.odds,book:x.book||""},assessment:assessment});
+  x.decision=decision;x.reviewReason=notes;
+  // No cambiar el estado de validación estadística ni crear un pick apostado.
+  save();render();alert("Segunda revisión guardada. Clasificación actualizada sin modificar picks ni historial.");
+ }
+});
+
+function addParlayLeg(data){
+ var n=document.createElement("div");n.className="parlay-leg";
+ n.innerHTML='<div class="row"><b>Selección del ticket</b><button type="button" class="danger" data-remove-leg>Quitar</button></div><label>Vincular investigación (opcional)<select data-leg-radar><option value="">Captura manual</option></select></label><label>Evento<input data-leg-event required placeholder="Partido / evento"></label><label>Mercado ejecutado<input data-leg-market required placeholder="Jugador Over 52.5"></label><label>Resultado de la selección<select data-leg-status><option value="pendiente">Pendiente</option><option value="ganado">Ganada</option><option value="perdido">Perdida</option><option value="nulo">Anulada</option></select></label>';
+ var sel=n.querySelector('[data-leg-radar]');cloudMerged().slice().sort(function(a,b){return String(b.date).localeCompare(String(a.date))}).forEach(function(x){var opt=document.createElement('option');opt.value=x.id;opt.textContent=(x.date||'')+' · '+x.market+' · '+x.event;sel.appendChild(opt)});
+ sel.addEventListener('change',function(){var x=cloudMerged().find(function(y){return y.id===sel.value});if(x){n.querySelector('[data-leg-event]').value=x.event;n.querySelector('[data-leg-market]').value=x.market}});
+ n.querySelector('[data-remove-leg]').addEventListener('click',function(){if($('parlayLegs').children.length<=2)return alert('Un parlay necesita al menos dos selecciones.');n.remove()});
+ if(data){sel.value=data.radarId||'';n.querySelector('[data-leg-event]').value=data.event||'';n.querySelector('[data-leg-market]').value=data.market||'';n.querySelector('[data-leg-status]').value=data.status||'pendiente'}
+ $('parlayLegs').appendChild(n);
+}
+function readParlayLegs(){return Array.from($('parlayLegs').children).map(function(el){var sel=el.querySelector('[data-leg-radar]'),x=cloudMerged().find(function(y){return y.id===sel.value});return {radarId:sel.value||null,radarSourceId:x?(x.cloudSourceId||x.id):null,event:el.querySelector('[data-leg-event]').value.trim(),market:el.querySelector('[data-leg-market]').value.trim(),status:el.querySelector('[data-leg-status]').value}})}
+function parlayStatus(legs){if(legs.some(function(l){return l.status==='perdido'}))return 'perdido';if(legs.every(function(l){return l.status==='ganado'}))return 'ganado';if(legs.every(function(l){return l.status==='nulo'}))return 'nulo';return 'pendiente'}
+function renderParlays(){var tickets=db.picks.filter(function(x){return x.type==='parlay'});$('parlayList').innerHTML=tickets.map(function(x){return '<div class="item"><div class="row"><b>'+esc(x.date)+' · '+esc(x.book||'Parlay')+'</b><span class="pill '+(x.status==='ganado'?'yes':x.status==='perdido'?'no':'warn')+'">'+esc(x.status)+'</span></div><div class="muted">'+esc(x.legs.length)+' selecciones · Cuota '+esc(x.odds)+' · '+esc(x.units)+' U · '+esc(x.reference||'Sin referencia')+'</div>'+x.legs.map(function(l,i){return '<div class="tiny">'+(i+1)+'. '+esc(l.event)+' — '+esc(l.market)+' ('+esc(l.status)+')</div>'}).join('')+'<div class="actions"><button class="secondary" data-edit-parlay="'+esc(x.id)+'">Actualizar resultados</button></div></div>'}).join('')||'<p class="muted">Todavía no hay parlays registrados.</p>'}
+$('addParlayLeg').addEventListener('click',function(){addParlayLeg()});
+$('parlayForm').addEventListener('submit',function(e){e.preventDefault();var f=formObj(this),legs=readParlayLegs(),od=Number(f.odds),u=Number(f.units);if(legs.length<2||legs.some(function(l){return !l.event||!l.market})||!(od>1&&u>0))return alert('Captura al menos dos selecciones y la cuota/unidades reales.');var computed=parlayStatus(legs);if(f.status!==computed&&computed!=='pendiente'&&!confirm('El estado del ticket difiere de los resultados de sus selecciones. ¿Guardar el estado indicado?'))return;var x={id:'parlay-'+Date.now()+'-'+Math.random().toString(36).slice(2,7),type:'parlay',execution:'realizada',date:f.date,sport:'Mixto',event:'Parlay de '+legs.length+' selecciones',market:'Parlay · '+legs.length+' selecciones',book:f.book,reference:f.reference||'',odds:od,units:u,status:f.status,legs:legs,notes:f.notes||'',createdAt:new Date().toISOString()};db.picks.unshift(x);save();render();this.reset();$('parlayLegs').innerHTML='';addParlayLeg();addParlayLeg();alert('Ticket parlay guardado. Cuenta como una sola apuesta.')});
+$('parlayList').addEventListener('click',function(e){var b=e.target.closest('[data-edit-parlay]');if(!b)return;var x=db.picks.find(function(y){return y.id===b.getAttribute('data-edit-parlay')});if(!x)return;var valid=['pendiente','ganado','perdido','nulo'];x.legs.forEach(function(l,i){var v=prompt('Selección '+(i+1)+': '+l.market+'\nResultado: pendiente, ganado, perdido, nulo',l.status);if(v!==null&&valid.indexOf(v.trim().toLowerCase())>=0)l.status=v.trim().toLowerCase()});var auto=parlayStatus(x.legs);var final=prompt('Resultado global del ticket (revisar reglas de la casa, anulaciones y cuota ajustada): pendiente, ganado, perdido, nulo',auto);if(final===null)return;final=final.trim().toLowerCase();if(valid.indexOf(final)<0)return alert('Resultado no válido');if(final==='ganado'&&x.legs.some(function(l){return l.status==='perdido'}))return alert('Hay una selección perdida. Revisa el resultado global antes de marcar ganado.');if(final==='ganado'&&x.legs.some(function(l){return l.status==='nulo'})){var newOdds=prompt('Hay selecciones anuladas. Introduce la cuota combinada AJUSTADA por la casa:',x.odds);if(newOdds===null||!(Number(newOdds)>1))return alert('Se requiere cuota ajustada.');x.odds=Number(newOdds)}x.status=final;x.updatedAt=new Date().toISOString();save();render();alert('Ticket actualizado.')});
+addParlayLeg();addParlayLeg();
+function makeChart(values){var min=Math.min.apply(null,values),max=Math.max.apply(null,values),range=max-min||1;var pts=values.map(function(v,i){return (15+i*300/Math.max(1,values.length-1)).toFixed(1)+","+(140-(v-min)/range*110).toFixed(1)}).join(" ");return '<svg viewBox="0 0 330 160" role="img" aria-label="Evolución de unidades"><line x1="10" y1="145" x2="320" y2="145" stroke="#3d5067"/><polyline points="'+pts+'" fill="none" stroke="#4ed6ab" stroke-width="3" stroke-linecap="round"/></svg>'}
+function evaluate(){var o=num($("calcOdds").value),p=num($("calcProb").value);$("implied").textContent=o>1?(100/o).toFixed(2)+"%":"—";$("edge").textContent=o>1&&p>0?(p-100/o).toFixed(2)+" pp":"—";$("ev").textContent=o>1&&p>0?((o*p/100-1)*100).toFixed(2)+"%":"—";$("fair").textContent=p>0?(100/p).toFixed(2):"—"}
+$("calcOdds").addEventListener("input",evaluate);$("calcProb").addEventListener("input",evaluate);
+function formObj(form){var obj={};new FormData(form).forEach(function(v,k){obj[k]=v});return obj}
+$("opForm").addEventListener("submit",function(e){e.preventDefault();var x=formObj(this);x.odds=num(x.odds);x.prob=num(x.prob);x.id="op-"+Date.now();db.opportunities.unshift(x);save();render();this.reset();setDate();alert("Oportunidad registrada.")});
+$("pickForm").addEventListener("submit",function(e){e.preventDefault();var x=formObj(this);x.odds=num(x.odds);x.units=num(x.units);x.id="pick-"+Date.now();x.execution="realizada";db.picks.unshift(x);save();render();this.reset();setDate();alert("Pick registrado.")});
+function download(name,content,type){var blob=new Blob([content],{type:type});var url=URL.createObjectURL(blob);var a=document.createElement("a");a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url)},10000)}
+$("export").addEventListener("click",function(){download("juande_respaldo.json",JSON.stringify(db,null,2),"application/json")});
+$("exportCSV").addEventListener("click",function(){var keys=["date","sport","event","market","odds","units","status","notes","type","reference","legs"];var rows=[keys.join(",")].concat(db.picks.map(function(x){return keys.map(function(k){return '"'+String(x[k]==null?"":k==="legs"?JSON.stringify(x[k]):x[k]).replace(/"/g,'""')+'"'}).join(",")}));download("juande_picks.csv","\ufeff"+rows.join("\r\n"),"text/csv;charset=utf-8")});
+$("import").addEventListener("change",function(e){var f=e.target.files[0];if(!f)return;var reader=new FileReader();reader.onload=function(){try{var x=JSON.parse(reader.result);if(!Array.isArray(x.picks)||!Array.isArray(x.opportunities))throw Error("Formato no compatible");var mode=$("importMode").value;if(mode==="replace"){if(!confirm("¿REEMPLAZAR todos los datos actuales? Exporta primero un respaldo."))return;db=x}else{var oldP=db.picks.length,oldO=db.opportunities.length;mergeRows(db.picks,x.picks);mergeRows(db.opportunities,x.opportunities);alert("Fusionados: "+(db.picks.length-oldP)+" picks y "+(db.opportunities.length-oldO)+" oportunidades nuevas.")}save();render();if(mode==="replace")alert("Respaldo importado y datos reemplazados.")}catch(err){alert("Error: "+err.message)}};reader.readAsText(f);e.target.value=""});
+$("exportRadarCSV").addEventListener("click",function(){var keys=["date","sport","event","market","odds","prob","sources","grade","stage","decision","reviewReason","outcome","sourceUrl","notes"];var rows=[keys.join(",")].concat(db.opportunities.map(function(x){return keys.map(function(k){var val=String(x[k]==null?"":x[k]);return '"'+val.replace(/"/g,'""')+'"'}).join(",")}));download("juande_radar.csv","\ufeff"+rows.join("\r\n"),"text/csv;charset=utf-8")});
+function setDate(){var d=new Date();var date=d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");document.querySelector('#opForm [name="date"]').value=date;document.querySelector('#pickForm [name="date"]').value=date;document.querySelector('#universalForm [name="date"]').value=date}
+
+// Supabase REST integration: public editorial feed + authenticated private backup.
+var SB_CONFIG_KEY="juande-supabase-reset-20261012-v1", sbConfig={}, sbSession=null;
+try{sbConfig=JSON.parse(localStorage.getItem(SB_CONFIG_KEY)||"{}")}catch(e){}
+if(!sbConfig.url)sbConfig.url="https://zmccfaeljlailvcwktxs.supabase.co";
+if(!sbConfig.key)sbConfig.key="sb_publishable_6GpE9f7430JVF5zMq1QvTA_cx19ccJO";
+function sbMessage(msg){$("sbStatus").textContent=msg}
+function sbBase(){return String(sbConfig.url||"").replace(/\/$/,"")}
+function sbReady(){return /^https:\/\/[a-z0-9-]+\.supabase\.co$/i.test(sbBase())&&!!sbConfig.key}
+async function sbRequest(path,opts,privateAuth){
+ if(!sbReady())throw Error("Configura URL y clave pública de Supabase.");
+ opts=opts||{};
+ var headers={apikey:sbConfig.key,Accept:"application/json"};
+ if(opts.body)headers["Content-Type"]="application/json";
+ if(privateAuth){if(!sbSession||!sbSession.access_token)throw Error("Inicia sesión para acceder a tus datos privados.");headers.Authorization="Bearer "+sbSession.access_token}
+ else if(!/^sb_publishable_/i.test(sbConfig.key))headers.Authorization="Bearer "+sbConfig.key;
+ if(opts.prefer)headers.Prefer=opts.prefer;
+ var r=await fetch(sbBase()+path,{method:opts.method||"GET",headers:headers,body:opts.body?JSON.stringify(opts.body):undefined,cache:"no-store"});
+ var t=await r.text(), data;try{data=t?JSON.parse(t):null}catch(e){data=t}
+ if(!r.ok)throw Error("HTTP "+r.status+": "+((data&&((data.message)||(data.error_description)||(data.error)))||"Respuesta no válida"));
+ return data;
+}
+function normalizeCloud(x){
+ var r=x.payload;if(!r||typeof r!=="object"||!r.id||!r.event||!r.market)return null;
+ var o=JSON.parse(JSON.stringify(r));o.id="cloud:"+x.id;o.cloudPublishedAt=x.updated_at;o.cloudSourceId=x.id;o.sources=o.sources||"Radar publicado";return o;
+}
+async function refreshCloud(silent){
+ if(!sbReady()){if(!silent)sbMessage("Configura Supabase para activar la actualización automática.");return}
+ try{
+ var rows=await sbRequest("/rest/v1/published_radar?select=id,payload,updated_at&order=updated_at.desc&limit=500");
+ cloudFeed=(Array.isArray(rows)?rows:[]).map(normalizeCloud).filter(function(x){return x&&x.date>=START_DATE});
+ render();sbMessage("Radar sincronizado: "+cloudFeed.length+" investigaciones desde 12/oct/2026. "+new Date().toLocaleString("es-MX"));
+ }catch(e){if(!silent)sbMessage("No se pudo actualizar Radar: "+e.message+". Verifica clave pública, acceso a Internet y permisos de lectura.")}
+}
+function cloudMerged(){
+ var localKeys={};db.opportunities.forEach(function(x){localKeys[uniqueKey(x)]=true});
+ return db.opportunities.concat(cloudFeed.filter(function(x){return !localKeys[uniqueKey(x)]}));
+}
+function sbStore(){try{localStorage.setItem(SB_CONFIG_KEY,JSON.stringify(sbConfig));return true}catch(e){sbMessage("No se pudo guardar la configuración en este navegador: "+e.message);return false}}
+$("sbUrl").value=sbConfig.url||"";$("sbKey").value=sbConfig.key||"";
+$("sbConnect").addEventListener("click",async function(){
+ var url=$("sbUrl").value.trim().replace(/\/$/,""),key=$("sbKey").value.trim();
+ if(!/^https:\/\/[a-z0-9-]+\.supabase\.co$/i.test(url)){sbMessage("URL no válida: debe ser https://...supabase.co");return}
+ if(!key||/service_role|sb_secret_/i.test(key)){sbMessage("Usa únicamente la clave pública (publishable / anon), nunca una clave secreta.");return}
+ sbConfig={url:url,key:key};sbSession=null;if(sbStore())await refreshCloud(false)
+});
+$("sbRefresh").addEventListener("click",function(){refreshCloud(false)});
+async function sbAuth(action){
+ if(!sbReady())throw Error("Configura la conexión primero.");
+ var email=$("sbEmail").value.trim(),password=$("sbPassword").value;
+ if(!email||!password)throw Error("Introduce correo y contraseña.");
+ var d=await sbRequest("/auth/v1/"+action,{method:"POST",body:{email:email,password:password}});
+ if(d&&d.access_token){sbSession=d;sbMessage("Sesión iniciada: "+email)}
+ else sbMessage("Cuenta creada. Revisa tu correo si Supabase solicita confirmación.");
+ $("sbPassword").value="";
+}
+$("sbSignup").addEventListener("click",function(){sbAuth("signup").catch(function(e){sbMessage("Registro: "+e.message)})});
+$("sbLogin").addEventListener("click",function(){sbAuth("token?grant_type=password").catch(function(e){sbMessage("Acceso: "+e.message)})});
+$("sbLogout").addEventListener("click",function(){sbSession=null;sbMessage("Sesión cerrada. Tus datos locales permanecen.")});
+$("sbPush").addEventListener("click",async function(){
+ try{
+ if(!sbSession||!sbSession.user)throw Error("Inicia sesión.");
+ if(!confirm("¿Guardar una copia privada de tus datos locales en Supabase? No modifica el Radar publicado."))return;
+ var uid=sbSession.user.id,rows=[{user_id:uid,kind:"snapshot",record_id:"latest",payload:db}];
+ await sbRequest("/rest/v1/user_records?on_conflict=user_id,kind,record_id",{method:"POST",prefer:"resolution=merge-duplicates,return=minimal",body:rows},true);
+ sbMessage("Copia privada guardada correctamente. Conserva también tu respaldo JSON.");
+ }catch(e){sbMessage("Error al guardar: "+e.message)}
+});
+$("sbPull").addEventListener("click",async function(){
+ try{
+ var rows=await sbRequest("/rest/v1/user_records?kind=eq.snapshot&record_id=eq.latest&select=payload&limit=1",{},true);
+ var remote=rows&&rows[0]&&rows[0].payload;
+ if(!remote||!Array.isArray(remote.picks)||!Array.isArray(remote.opportunities))throw Error("No existe una copia privada válida.");
+ if(!confirm("¿Fusionar la copia privada con los registros locales? Los registros existentes no se sobrescribirán."))return;
+ var beforeP=db.picks.length,beforeO=db.opportunities.length;
+ mergeRows(db.picks,remote.picks);mergeRows(db.opportunities,remote.opportunities);save();render();
+ sbMessage("Recuperación completada: "+(db.picks.length-beforeP)+" picks y "+(db.opportunities.length-beforeO)+" oportunidades agregadas.");
+ }catch(e){sbMessage("Error al recuperar: "+e.message)}
+});
+// Refresh when returning to app; periodic refresh while tab is visible.
+document.addEventListener("visibilitychange",function(){if(!document.hidden)refreshCloud(true)});
+setInterval(function(){if(!document.hidden)refreshCloud(true)},120000);
+if(sbReady())refreshCloud(false);
+
+setDate();updateMode();assignInitialDecisions();render();evaluate();
+})();
+</script><script>(function(){try{var a=JSON.parse(localStorage.getItem('sj3_beta1_investigations')||'[]');var el=document.getElementById('sj3-beta2-count');if(el&&Array.isArray(a))el.textContent=a.length+' ficha(s) 3.0 guardada(s) en este navegador · no cuentan como apuestas';}catch(e){}})();</script></body></html>
