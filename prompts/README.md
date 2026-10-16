@@ -10,6 +10,8 @@
 
 5. `originales/live_line_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Live Market. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
 
+6. `originales/in_play_discipline_check.txt` — texto entregado por Juande el 16 de octubre de 2026; control transversal de disciplina y exposición, vinculado a Live Market. La especificación previa asigna disciplina al prompt 7, pero su correspondencia exacta aún no se da por confirmada. Guardado íntegro; aún no se ejecuta desde la aplicación.
+
 ## Revisión pendiente del prompt Anytime TD
 
 - Los porcentajes históricos se conservan como afirmaciones del texto original. Falta una fuente verificable y delimitar liga, temporadas y definición del denominador; no se consideran datos validados.
@@ -56,4 +58,15 @@
 - Conservar los tres dictámenes solicitados: movimiento proporcionado, posible exceso o información insuficiente. Una discrepancia de línea no demuestra EV positivo sin cuota y probabilidad justificadas.
 - No se recibió un partido ni líneas concretas. El original queda intacto.
 
-Estado: 5 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
+## Revisión pendiente del control de disciplina en vivo
+
+- Solicitar apuesta, cuota vigente, importe, unidad habitual, resultados del día y motivo. Distinguir apuestas liquidadas, pendientes y exposición; expresar importe/unidad cuando ambos sean válidos.
+- Formular la pregunta sobre aumento de importe sin sugerir que recuperar pérdidas lo justifica. No aumentar automáticamente la unidad ni proponer progresiones para recuperar.
+- Identificar evidencia observable y su fuente/hora. La observación puede ser cierta sin justificar el precio; «lectura» no equivale a valor positivo ni a autorización para apostar.
+- Mantener los tres dictámenes: lectura, reacción o información insuficiente. No atribuir estados psicológicos que no se desprendan de la información proporcionada.
+- Si los datos indican persecución de pérdidas o impulso, el flujo debe permitir detenerse/cerrar la app, sin presentar otra apuesta como solución.
+- La frase sobre ser el único mercado que ofrece precio al perder es retórica del original, no una propiedad exclusiva verificada del mercado en vivo.
+- Este mensaje contiene una plantilla, no una declaración del estado emocional ni de pérdidas del usuario. No se recibió una apuesta concreta.
+- El original queda intacto.
+
+Estado: 6 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
