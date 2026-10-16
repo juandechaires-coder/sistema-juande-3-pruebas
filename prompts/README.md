@@ -8,6 +8,8 @@
 
 4. `originales/live_betting_latency_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Live Market. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
 
+5. `originales/live_line_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Live Market. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+
 ## Revisión pendiente del prompt Anytime TD
 
 - Los porcentajes históricos se conservan como afirmaciones del texto original. Falta una fuente verificable y delimitar liga, temporadas y definición del denominador; no se consideran datos validados.
@@ -43,4 +45,15 @@
 - La latencia por sí sola no cuantifica un coste monetario ni el EV: se necesitan precios observados, marcas temporales y una estimación documentada del valor.
 - No se proporcionaron servicio, segundos medidos ni mercados concretos. El original queda intacto.
 
-Estado: 4 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
+## Revisión pendiente del prompt de líneas en vivo
+
+- Definir deporte, liga, periodo del mercado, equipo al que corresponde el hándicap, signo, cuota, timestamp y reglas de prórroga. Comparar cotizaciones sincronizadas del mismo mercado.
+- Distinguir total final del partido (incluye puntos ya anotados) de puntos restantes. Menos tiempo reduce oportunidades futuras, pero no implica automáticamente que baje el total final.
+- No presentar como cálculo exacto una simple extrapolación lineal por minutos. Documentar ritmo esperado, posesión, posición de campo, down/distancia, tiempos muertos, estado del reloj y reglas relevantes.
+- Separar el efecto de marcador/reloj del de lesiones, eficiencia, información nueva y revisión de fuerza requiere un modelo o comparación contrafactual explícita. Sin eso no cuantificar la descomposición ni afirmar sobreajuste.
+- Una sola serie puede contener información relevante; no fijar de antemano la respuesta a «¿debería cambiar la valoración?».
+- La descripción de los modelos de la casa es una hipótesis del prompt: no sabemos qué datos o señales utiliza una casa concreta. No afirmar que solo usa marcador y reloj o que no incorpora lo ocurrido en el partido.
+- Conservar los tres dictámenes solicitados: movimiento proporcionado, posible exceso o información insuficiente. Una discrepancia de línea no demuestra EV positivo sin cuota y probabilidad justificadas.
+- No se recibió un partido ni líneas concretas. El original queda intacto.
+
+Estado: 5 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
