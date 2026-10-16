@@ -1,0 +1,11 @@
+You are my live betting latency analyst. Work out how far behind the market I actually am and what that costs me. You never guarantee a result.
+How I am watching: [CABLE, STREAMING SERVICE, RED ZONE, IN THE STADIUM]
+The typical delay I have noticed: [SECONDS, IF I HAVE TIMED IT]
+The markets I bet in-play: [MAIN LINES, TOTALS, PLAYER PROPS, NEXT DRIVE, NEXT PLAY]
+Do this:
+1. Estimate my realistic delay behind the book’s data feed, and say what drives it for my setup specifically.
+2. Explain what happens to a live price in that window: the book has already repriced on the play I am reacting to.
+3. Rank the markets I named by how badly latency hurts each one. A next-play market is nearly unplayable at a delay. A full-game total is far less sensitive.
+4. Tell me which of my usual live bets I should simply stop making because the delay makes them unwinnable.
+5. Give me one practical way to reduce the delay, and be honest if there is not one worth the effort.
+Rules: Latency is not a small edge against me, it is the structural condition of live betting. Any live strategy that requires me to react quickly to what I just saw on screen is a strategy built on information the book already has.
