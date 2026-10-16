@@ -4,6 +4,8 @@
 
 2. `originales/goal_line_role_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Touchdown, vinculado a Running Back. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
 
+3. `originales/prop_pricing_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Market & Pricing, vinculado a Touchdown. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+
 ## Revisión pendiente del prompt Anytime TD
 
 - Los porcentajes históricos se conservan como afirmaciones del texto original. Falta una fuente verificable y delimitar liga, temporadas y definición del denominador; no se consideran datos validados.
@@ -20,4 +22,14 @@
 - Evaluar participación del quarterback con datos observados, sin restar automáticamente el 33% histórico a la probabilidad del corredor.
 - No se recibió un caso concreto de jugadores o partido.
 
-Estado: 2 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
+## Revisión pendiente del prompt de precios de props
+
+- Los márgenes, la comparación 4.1%/28.9%, el promedio de 2025 y el dato de Week 1 necesitan fuentes, fechas y metodología. Conservar las afirmaciones originales sin presentarlas como estadísticas verificadas.
+- El formato de cuota y la estimación propia de probabilidad deben incluirse en las entradas para poder convertir y comparar. Si falta la estimación, solo puede mostrarse el punto de equilibrio.
+- Los eventos Anytime TD de distintos jugadores no son mutuamente excluyentes: sumar sus probabilidades implícitas y restar 100% no determina por sí solo el margen de una pizarra de «sí». El número de jugadores cotizados tampoco basta para calcularlo.
+- Diferenciar overround de un mercado sí/no, margen estimado de una pizarra y retención realizada de la casa.
+- La mejor cuota solo puede afirmarse entre las casas y cotizaciones efectivamente verificadas, con hora de consulta y mismas reglas de liquidación; no garantizar que sea la mejor de todo el mercado.
+- Una separación entre casas es diferencia de precio, no evidencia suficiente de EV positivo ni de rentabilidad. La afirmación final sobre pérdidas de temporada se conserva como texto original, no como resultado matemático inevitable.
+- No se recibieron jugador, cuotas concretas ni estimación de probabilidad.
+
+Estado: 3 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
