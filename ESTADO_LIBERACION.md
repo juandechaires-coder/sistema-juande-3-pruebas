@@ -53,3 +53,14 @@ La subida de archivos y la compilación sintáctica no certifican esas pruebas f
 - Prueba Playwright preparada, pero NO ejecutada: el navegador no estaba instalado y su descarga devolvió archivos inválidos. No se da por comprobado el renderizado móvil.
 - Ejecución local: node tests/cloud-recovery.test.cjs y node tests/cloud-recovery.integration.cjs.
 - Prueba real solicitada: entrar en recuperar-radar.html, pulsar Revisar fichas y comprobar los conteos. Incorporar solo si hay fichas nuevas. Si A vs B ya está localmente, debe omitirse; no borrar fichas para forzar la prueba.
+
+
+## Revisión del 16 de octubre
+
+- Confirmado por el usuario: recuperación completa de A vs B en pestaña privada, además de detección de duplicados en Safari habitual.
+- Se ejecutaron pruebas con roles reales de la base de pruebas e identidades simuladas; ver REVISION_16_OCTUBRE.md para alcance y resultados.
+- Se redujeron privilegios innecesarios exclusivamente en las cuatro tablas de pruebas.
+- Corregidos estado sugerido de parlays con anulaciones, cancelación de edición y exclusión de valores no finitos de ROI; nueve pruebas financieras aprobadas.
+- Total: 24 pruebas automatizadas locales aprobadas (9 recuperación, 6 integración simulada, 9 financieras).
+- Texto íntegro de los 27 prompts aún no localizado; no se afirma integración completa ni automatización de investigación.
+- La actualización ficha/historial de RC1 Fase 2 se mantiene como diagnóstico; no se libera como sincronización bidireccional.
