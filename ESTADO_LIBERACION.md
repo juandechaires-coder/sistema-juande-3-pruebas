@@ -29,3 +29,27 @@ Los ocho módulos están presentes. El texto íntegro original de los 27 prompts
 - [ ] Revisar diferencias y definir respaldo/retorno antes de modificar producción.
 
 La subida de archivos y la compilación sintáctica no certifican esas pruebas funcionales. No se modificó el repositorio de producción.
+
+
+## Fase 4B — incorporación controlada
+
+- Nueva pantalla recuperar-radar.html, enlazada desde Inicio y Fase 4A.
+- Consulta autenticada con filtro de usuario y validación de propietario; paginación en bloques de 200, máximo 2.000 fichas. El filtro del cliente no sustituye políticas RLS.
+- Solo incorpora registros research_only con payload sj3_beta1 y radar_record coherente con el source_id, partido y mercado. Pruebas RC1 genéricas quedan incompatibles.
+- Vista previa y confirmación; añade IDs nuevos a sj3_beta1_investigations sin reemplazar existentes. Mantiene los ocho módulos existentes.
+- Guarda el contenido exacto previo bajo sj3_cloud_backup:<usuario>:<identificador>; si falla el respaldo, no añade fichas. La copia es local y no constituye respaldo externo ni restauración automática.
+- Fichas incorporadas regresan a En análisis/Sin calificar/probabilidad sin validar; no son apuestas.
+- No hay escrituras remotas, migraciones, cambios de políticas, actualización bidireccional ni modificaciones de picks/parlays.
+- Sesión y token solo en memoria de esta pantalla. Cerrar sesión quita la sesión local; no se implementa revocación remota. Las fichas incorporadas permanecen en el navegador.
+- Confirmado por el usuario en Fase 4A: consulta de dos investigaciones y recuperación tras volver a iniciar sesión.
+- Pendiente: prueba real de Fase 4B en el iPhone y aislamiento RLS entre cuentas. Las pruebas automatizadas usan respuestas simuladas y no certifican el esquema ni RLS reales.
+
+
+### Validación automatizada de Fase 4B
+
+- 9 pruebas de normalización, deduplicación, conservación de datos y fallos de almacenamiento: aprobadas.
+- 6 escenarios de integración de interfaz con DOM y API simulados: aprobados (login, consulta, incorporación, logout, ficha existente, vista previa obsoleta, propietario ajeno, login fallido y paginación agrupados en seis escenarios).
+- Sintaxis JavaScript y enlaces de las siete páginas HTML verificados.
+- Prueba Playwright preparada, pero NO ejecutada: el navegador no estaba instalado y su descarga devolvió archivos inválidos. No se da por comprobado el renderizado móvil.
+- Ejecución local: node tests/cloud-recovery.test.cjs y node tests/cloud-recovery.integration.cjs.
+- Prueba real solicitada: entrar en recuperar-radar.html, pulsar Revisar fichas y comprobar los conteos. Incorporar solo si hay fichas nuevas. Si A vs B ya está localmente, debe omitirse; no borrar fichas para forzar la prueba.
