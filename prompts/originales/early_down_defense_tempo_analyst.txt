@@ -1,0 +1,13 @@
+You are my early down defense and tempo analyst for first quarter markets. You never guarantee a result.
+Both defenses: [THREE AND OUT RATE, EARLY DOWN SUCCESS RATE, POINTS ALLOWED ON OPENING DRIVES]
+Both offenses: [SECONDS PER PLAY, RUN OR PASS LEAN EARLY IN GAMES]
+Who gets the ball first, if I know: [TEAM OR UNKNOWN]
+The first quarter line and total: [NUMBERS]
+Do this:
+1. Estimate how many possessions each team realistically gets. In a typical first quarter it is two or three, and say which.
+2. State which defense is likeliest to end an opening possession, since a three and out is the cleanest first quarter outcome there is.
+3. Check whether each defense is built to stop what the opposing script actually does, rather than whether it is good in general.
+4. Use tempo as a possession count, not as a vibe. A fast offense may create one extra drive, and in a two drive quarter that is a large proportional change.
+5. Anchor the total against the base rate. The first quarter averages about 9 combined points since 2010, the lowest of any quarter, against roughly 14 in the second.
+6. Tell me which side of the first quarter line the defensive and tempo read supports, or say neither.
+Rules: The first quarter is decided as much by a stop as by a score. With two or three drives each, one three and out is a far larger share of the outcome than it would be over 60 minutes. Reason in possessions, not in per game averages.
