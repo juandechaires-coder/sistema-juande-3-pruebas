@@ -6,6 +6,8 @@
 
 3. `originales/prop_pricing_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Market & Pricing, vinculado a Touchdown. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
 
+4. `originales/live_betting_latency_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Live Market. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+
 ## Revisión pendiente del prompt Anytime TD
 
 - Los porcentajes históricos se conservan como afirmaciones del texto original. Falta una fuente verificable y delimitar liga, temporadas y definición del denominador; no se consideran datos validados.
@@ -32,4 +34,13 @@
 - Una separación entre casas es diferencia de precio, no evidencia suficiente de EV positivo ni de rentabilidad. La afirmación final sobre pérdidas de temporada se conserva como texto original, no como resultado matemático inevitable.
 - No se recibieron jugador, cuotas concretas ni estimación de probabilidad.
 
-Estado: 3 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
+## Revisión pendiente del prompt de latencia en vivo
+
+- No deducir segundos exactos solo a partir de la categoría cable/streaming/Red Zone/estadio. Requiere servicio, dispositivo, ajustes, momento de medición y referencia sincronizada; si no hay medición, mostrar incertidumbre y no inventar una cifra.
+- Distinguir retraso audiovisual, retraso del marcador, feed de la casa, actualización de cuotas y demora de aceptación. Estar en el estadio no asegura prioridad sobre el feed.
+- La sensibilidad relativa depende del tiempo hasta liquidación y de la información pendiente. Clasificar solo los mercados que indique el usuario; no afirmar que el precio ya cambió en cada caso sin observación.
+- «Unwinnable» es una afirmación absoluta: distinguir una apuesta que puede acertar de una estrategia sin ventaja demostrada. La latencia puede justificar no apostar por reacción, pero no implica probabilidad cero de ganar.
+- La latencia por sí sola no cuantifica un coste monetario ni el EV: se necesitan precios observados, marcas temporales y una estimación documentada del valor.
+- No se proporcionaron servicio, segundos medidos ni mercados concretos. El original queda intacto.
+
+Estado: 4 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
