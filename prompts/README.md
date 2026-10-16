@@ -12,6 +12,8 @@
 
 6. `originales/in_play_discipline_check.txt` — texto entregado por Juande el 16 de octubre de 2026; control transversal de disciplina y exposición, vinculado a Live Market. La especificación previa asigna disciplina al prompt 7, pero su correspondencia exacta aún no se da por confirmada. Guardado íntegro; aún no se ejecuta desde la aplicación.
 
+7. `originales/scripted_drive_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo First Quarter. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+
 ## Revisión pendiente del prompt Anytime TD
 
 - Los porcentajes históricos se conservan como afirmaciones del texto original. Falta una fuente verificable y delimitar liga, temporadas y definición del denominador; no se consideran datos validados.
@@ -69,4 +71,14 @@
 - Este mensaje contiene una plantilla, no una declaración del estado emocional ni de pérdidas del usuario. No se recibió una apuesta concreta.
 - El original queda intacto.
 
-Estado: 6 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
+## Revisión pendiente del prompt de series planificadas
+
+- Verificar la fuente del 60% desde 2007 y definir su unidad de análisis (equipo, equipo-temporada, partido) y la métrica que determina «mejor». No tratarlo como probabilidad de cubrir una línea de primer cuarto.
+- Definir «scripted window»: primer drive, primeras N jugadas u otra ventana. No confundir primer drive con primer cuarto ni mezclar ventanas entre equipos.
+- Separar tasa de anotación, EPA/jugada y yardas/jugada; registrar muestra, oponentes, localía y temporadas/coordinador comparables. No completar la clasificación histórica sin evidencia.
+- La velocidad de ajuste defensivo y el efecto de ser coordinador nuevo requieren evidencia; no fijar un instante exacto en que desaparece la ventaja ni asumir que un debutante es necesariamente más impredecible.
+- Considerar quién recibe la primera posesión, ritmo, oportunidades y reglas del mercado al relacionar el guion inicial con el primer cuarto. Cuota y probabilidad justificadas siguen siendo necesarias para afirmar valor.
+- Si falta la comparación dentro/fuera de guion, devolver lectura de guion no disponible, tal como exige el original.
+- No se recibió un enfrentamiento ni datos concretos. El original queda intacto.
+
+Estado: 7 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
