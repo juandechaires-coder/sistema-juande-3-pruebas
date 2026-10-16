@@ -14,6 +14,8 @@
 
 7. `originales/scripted_drive_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo First Quarter. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
 
+8. `originales/early_down_defense_tempo_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo First Quarter. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+
 ## Revisión pendiente del prompt Anytime TD
 
 - Los porcentajes históricos se conservan como afirmaciones del texto original. Falta una fuente verificable y delimitar liga, temporadas y definición del denominador; no se consideran datos validados.
@@ -81,4 +83,14 @@
 - Si falta la comparación dentro/fuera de guion, devolver lectura de guion no disponible, tal como exige el original.
 - No se recibió un enfrentamiento ni datos concretos. El original queda intacto.
 
-Estado: 7 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
+## Revisión pendiente del prompt de defensa y ritmo del primer cuarto
+
+- Verificar liga, temporadas y fuente de los promedios de nueve/catorce puntos y del supuesto de dos/tres posesiones por equipo. Son referencias del original, no cifras validadas ni límites garantizados.
+- Definir tasas defensivas (three-and-out, éxito permitido en primeros downs), denominadores, dirección y muestras comparables. Una tasa alta de éxito permitida indica algo distinto de una tasa alta de stops.
+- Segundos por jugada no bastan para calcular posesiones: considerar jugadas por serie, incompletos, carrera/pase, reloj, posición de campo y posesión inicial. Mostrar estimación o intervalo y supuestos; no forzar «dos o tres» cuando no esté sustentado.
+- Una serie que empieza en el primer cuarto puede continuar en el segundo; distinguir posesiones iniciadas, completadas y puntos anotados dentro del periodo.
+- Relacionar defensa contra carrera/pase con el guion inicial real del rival; si ese guion es desconocido, declarar el dato faltante.
+- El punto de partida debe ser el mercado exacto (hándicap o total), equipo/signo y cuota. Una dirección táctica favorable no demuestra por sí misma valor para apostar.
+- No se recibieron equipos, métricas, posesión inicial ni líneas concretas. El original queda intacto.
+
+Estado: 8 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
