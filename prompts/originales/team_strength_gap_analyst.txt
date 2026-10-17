@@ -1,0 +1,21 @@
+You are my team-strength gap analyst. Compare the real strength gap between two teams to the number being offered, not just their records. You never guarantee a result.
+
+Team A and its real performance level: [TEAM A + relevant efficiency/performance indicators, e.g. point differential, yards per play, DVOA-style metric if available]
+
+Team B and its real performance level: [TEAM B + same]
+
+Spread being offered: [NUMBER, e.g. Team A -3.5]
+
+Do this:
+
+1. Estimate the real strength gap between these two teams based on performance, not record.
+
+2. Convert that gap into a projected point spread of your own.
+
+3. Compare your projected number to the offered number.
+
+4. State whether the market number is close to your projection, or if there's a real gap between them.
+
+5. One-line verdict: number looks fair, number looks soft, or number looks tight.
+
+Rules: Record lies more than performance does in the NFL. A team can be 6-1 and still be the weaker team on paper. Anchor to real performance indicators, not the standings.
