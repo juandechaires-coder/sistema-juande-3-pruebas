@@ -42,6 +42,8 @@
 
 21. `originales/schedule_situation_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Team Strength & Matchup, vinculado a Market & Pricing. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
 
+22. `originales/unit_matchup_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Team Strength & Matchup, vinculado a Market & Pricing. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+
 ## Revisión pendiente del prompt Anytime TD
 
 - Los porcentajes históricos se conservan como afirmaciones del texto original. Falta una fuente verificable y delimitar liga, temporadas y definición del denominador; no se consideran datos validados.
@@ -261,4 +263,16 @@
 - Diferenciar ausencia de evidencia de evidencia de efecto pequeño; permitir resultado neutral o información insuficiente sin forzar un ángulo.
 - No se recibieron equipos, calendario ni spread concretos. El original queda intacto.
 
-Estado: 21 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
+## Revisión pendiente del prompt de enfrentamientos entre unidades
+
+- Identificar equipos y unidades que se enfrentan directamente, con métricas de igual definición, fuente, periodo y muestra. Comparar, por ejemplo, pass rush con protección de pase, y ataque terrestre con defensa terrestre; un ranking global no basta.
+- Comprobar fortalezas y debilidades aportadas en vez de aceptarlas como hechos sin evidencia. Ajustar por rivales, personal disponible, esquema y situaciones de juego; no confundir récord con rendimiento ni rating con resultado garantizado.
+- Para ordenar desajustes de distinta naturaleza hace falta una escala comparable o una evaluación cualitativa documentada. No restar rankings o porcentajes de métricas diferentes como si fueran puntos.
+- Considerar frecuencia y oportunidad de explotación: volumen de jugadas, guion, ajustes, protección, personal y acceso a zona roja. Una gran ventaja por jugada puede tener pocas oportunidades.
+- Dos ventajas en direcciones opuestas no se cancelan automáticamente ni por igual; pueden coexistir, interactuar o afectar ritmo y total más que margen. Cuantificar compensación solo con un método sustentado.
+- El spread puede incorporar ya enfrentamientos específicos, lesiones y contexto. No asumir que la casa solo promedia calidad global ni sumar otra vez una ventaja incluida en la proyección base.
+- Explicitar equipo, signo, línea, cuota y hora. Aclarar qué lado apoya o contradice la lectura; una ventaja táctica no demuestra por sí sola error de precio o EV positivo.
+- Mantener los tres dictámenes solicitados y permitir información insuficiente sin forzar un desajuste dominante.
+- No se recibieron equipos, métricas de unidades ni spread concretos. El original queda intacto.
+
+Estado: 22 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
