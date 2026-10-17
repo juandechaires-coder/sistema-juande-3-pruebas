@@ -80,3 +80,10 @@ Validación local: 24 escenarios previos y pruebas nuevas del motor, compatibili
 Función `juande-analyze` activa en Supabase de pruebas. Autentica la sesión y restringe el uso al propietario; cuota diaria e idempotencia en base de datos. Frontend conectado para recibir y guardar informes sin copiar JSON desde el chat. Diagnóstico remoto: servicio responde 200, sin credencial OpenAI (`configured:false`, `enabled:false`), rechaza POST sin sesión con 401. La ejecución real con IA queda pendiente de clave y activación explícita en Secrets; no se realizó consumo pagado.
 
 13 pruebas nuevas del servicio con proveedor simulado y pruebas SQL reales revertidas de cuota/permisos. Producción y las tablas de picks/parlays no se modificaron. Ver `supabase/functions/juande-analyze/README.md`.
+
+
+## Gemini gratuito · 17 octubre 2026
+
+Sustituida la conexión anterior por Gemini 2.5 Flash fijo. Cinco reservas por día UTC, máximo dos llamadas por investigación, límites de entrada/salida y sin reintentos, modelos alternativos ni servicios de pago. Error 429 detiene la consulta. La configuración anterior no activa el servicio.
+
+Activación bloqueada hasta guardar la clave privada de un proyecto Google Free sin facturación y confirmar esa condición en secretos. El servicio no verifica Cloud Billing: mantener Google sin facturación y Supabase en Free es condición externa. Sin credencial disponible no se ha hecho una investigación real. 15 pruebas de servicio y las suites de análisis, recuperación y finanzas pasan. Sin prueba visual en navegador ni cambios en producción.
