@@ -22,6 +22,8 @@
 
 11. `originales/yards_after_catch_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Receiver. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
 
+12. `originales/quarterback_impact_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Receiver. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+
 ## Revisión pendiente del prompt Anytime TD
 
 - Los porcentajes históricos se conservan como afirmaciones del texto original. Falta una fuente verificable y delimitar liga, temporadas y definición del denominador; no se consideran datos validados.
@@ -132,4 +134,14 @@
 - Mantener los tres perfiles solicitados y permitir información insuficiente cuando falten evidencias.
 - No se recibió jugador ni datos concretos. El original queda intacto.
 
-Estado: 11 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
+## Revisión pendiente del prompt de impacto del quarterback
+
+- Relacionar las zonas y rutas donde gana el receptor con la distribución de targets, precisión y disposición del quarterback a lanzar allí; registrar fuente, temporada, muestra y contexto. El tiempo para lanzar o la precisión global no bastan por sí solos.
+- Distinguir disposición a lanzar profundo o a ventanas estrechas de precisión y eficiencia en esos intentos. La voluntad del quarterback influye, pero no determina por completo el techo: intervienen protección, esquema, cobertura, rol y habilidad del receptor.
+- Separar volumen de pases del equipo, rutas del receptor, participación de targets y calidad de esos targets. Un ataque de bajo volumen no implica automáticamente escaso volumen individual.
+- Definir qué significan suelo y techo (recepciones, yardas, touchdowns y horizonte). No inventar porcentajes de producción atribuibles al quarterback o al receptor sin modelo o comparación sustentada.
+- Un mismo box score puede resultar de causas distintas; no afirmar equivalencia causal entre mala separación e imprecisión del quarterback a partir del resultado agregado.
+- Mantener los tres dictámenes solicitados, permitiendo información insuficiente cuando no se pueda atribuir el efecto. Ningún dictamen garantiza producción ni valor de una apuesta.
+- No se recibió receptor, quarterback ni datos concretos. El original queda intacto.
+
+Estado: 12 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
