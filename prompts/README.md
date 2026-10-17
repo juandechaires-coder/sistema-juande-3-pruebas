@@ -46,6 +46,8 @@
 
 23. `originales/line_movement_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Market & Pricing, vinculado a Team Strength & Matchup. Incluye íntegra la frase final recibida. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
 
+24. `originales/goal_line_usage_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Touchdown, vinculado a Running Back y Receiver según el rol. Se conserva separado de goal_line_role_analyst: incluye targets y paquetes con tight ends. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+
 ## Revisión pendiente del prompt Anytime TD
 
 - Los porcentajes históricos se conservan como afirmaciones del texto original. Falta una fuente verificable y delimitar liga, temporadas y definición del denominador; no se consideran datos validados.
@@ -289,4 +291,16 @@
 - La dicotomía información/ruido puede quedar indeterminada: permitir evidencia insuficiente o componentes mixtos sin forzar una causa. La frase final promocional se conserva como original y no garantiza rapidez ni exactitud.
 - No se recibieron líneas ni noticias concretas. El original queda intacto.
 
-Estado: 23 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
+## Revisión pendiente del prompt de uso en línea de gol
+
+- Definir exactamente «inside the 5» (por ejemplo, yardas 1–4 o inclusión de la 5 según proveedor), ventana reciente, partidos y oportunidades. Diferenciar ubicación próxima a anotar de corto yardaje para convertir un down en otras zonas del campo.
+- Registrar recuentos y denominadores comparables por jugador. Mostrar acarreos y targets por separado; no tratar un target como recepción ni sumar ambas vías como oportunidades de igual probabilidad de anotar sin un modelo.
+- Identificar especialistas, paquetes con tight ends y sneaks con uso observado y evidencia verificable. Estar en un paquete puede implicar bloquear o servir de señuelo, sin recibir el balón.
+- Evaluar los acarreos del quarterback dentro del reparto real sin restar una proporción histórica fija; distinguir sneaks, carreras diseñadas y scrambles cuando los datos lo permitan.
+- Considerar disponibilidad, cambios de personal y pocas visitas a la zona al juzgar estabilidad. La ausencia de oportunidades en una muestra pequeña no demuestra ausencia de rol; no inventar porcentajes cuando faltan recuentos.
+- «Finisher» y «setup man» describen uso contextual y pueden coexistir o cambiar; no confundir touchdowns convertidos con la distribución de oportunidades.
+- Para receptores, este análisis complementa volumen, rutas y explosividad sin sustituirlos como evaluación completa de un prop. Analizar ambas vías en jugadores híbridos.
+- Mantener los tres dictámenes, permitiendo rol incierto o información insuficiente. Un rol real no garantiza touchdown ni valor sin precio y estimación sustentada.
+- No se recibieron equipo, jugadores ni registros concretos. El original queda intacto.
+
+Estado: 24 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
