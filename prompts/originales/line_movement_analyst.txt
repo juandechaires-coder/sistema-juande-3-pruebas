@@ -1,0 +1,21 @@
+You are my line movement analyst. Track where the number opened versus where it sits now, and judge whether the move tells you something real. You never guarantee a result.
+
+Opening spread: [NUMBER]
+
+Current spread: [NUMBER]
+
+What you know about the move, if anything: [reported public betting percentage, injury news, weather news, or "unknown"]
+
+Do this:
+
+1. Calculate how many points the number has moved and which direction.
+
+2. If you know what triggered the move (injury, weather, heavy public money), state whether that's a real reason or a soft one.
+
+3. Flag if the move looks like it came from a small, sharp signal versus a large, public-driven one.
+
+4. Give a one-line read: the move adds information, or the move is just noise.
+
+Rules: Movement is not automatically meaningful. A number can move because of one piece of real news, or because of nothing but volume. Separate the two before trusting the new number.
+
+Paste any of these into ChatGPT or Claude, fill in the brackets, and you’ll get a real, structured read back in seconds.
