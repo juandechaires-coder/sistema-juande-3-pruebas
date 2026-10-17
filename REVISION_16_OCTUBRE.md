@@ -39,15 +39,15 @@ Nueve pruebas ejecutadas sobre las funciones reales de index.html: utilidad 0.69
 
 ## Prompts
 
-Se buscaron textos en archivos recuperados, dentro de ZIP, por nombre/contenido en archivos guardados y en contexto de conversaciones. No se localizó el texto íntegro original de los 27 prompts. Se conserva la asignación a ocho módulos en la especificación; no se inventaron sustitutos ni se afirma que el texto esté ejecutándose en la aplicación.
+La búsqueda inicial no localizó el conjunto íntegro. Posteriormente Juande entregó los textos en esta conversación y confirmó el 16 de octubre de 2026 que el total correcto es 26, no 27. Los 26 originales están íntegros en prompts/originales, con catálogo y observaciones separadas en prompts/README.md. Su ejecución desde la aplicación sigue pendiente.
 
-Para integrar fielmente los prompts se necesita recuperar su texto o imágenes originales. La interfaz actual es un flujo de captura, investigación y seguimiento; no realiza por sí sola investigación web ni modela automáticamente 100–300 mercados.
+La recuperación de textos está completa; para integrarlos falta implementar y validar su ejecución y los datos requeridos. La interfaz actual es un flujo de captura, investigación y seguimiento; no realiza por sí sola investigación web ni modela automáticamente 100–300 mercados.
 
 ## Antes de ampliar a producción
 
 - Permisos excesivos del esquema de pruebas reducidos y acceso comprobado; revisar el mismo criterio antes de cualquier migración a producción.
 - Probar con dos sesiones Auth reales si se habilitarán múltiples usuarios.
 - Resolver la actualización no atómica de ficha/historial o mantener esa página exclusivamente como diagnóstico.
-- Recuperar y verificar el texto de los prompts.
+- Implementar y validar la ejecución de los 26 prompts recuperados, conservando originales y observaciones separados.
 - Acordar el alcance de la primera versión: captura, copia a nube y recuperación manual están disponibles; sincronización bidireccional y motor automático de análisis no están terminados.
 - Respaldar el estado de producción y revisar diferencias antes de cambiarlo.
