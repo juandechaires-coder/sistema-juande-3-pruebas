@@ -13,7 +13,7 @@ Objetivo: liberar el viernes 16 de octubre. Estado: laboratorio; aún no aprobad
 
 Beta 5 trabaja en el navegador. RC1 Fase 3 copia fichas nuevas a la nube de pruebas; Fase 4A consulta hasta 500 filas y permite exportarlas. Ese JSON no se importa directamente a Beta 5. No existe sincronización bidireccional completa.
 
-Los ocho módulos están presentes. El texto íntegro original de los 27 prompts sigue pendiente de recuperación/verificación; las categorías no equivalen a su texto.
+Los ocho módulos están presentes. Recuperación completada: los 26 prompts entregados por Juande están íntegros en prompts/originales y catalogados en prompts/README.md. Juande confirmó que el total correcto es 26, no 27. La ejecución de los prompts desde la aplicación sigue pendiente.
 
 ## Comprobaciones pendientes antes de liberar
 
@@ -62,5 +62,5 @@ La subida de archivos y la compilación sintáctica no certifican esas pruebas f
 - Se redujeron privilegios innecesarios exclusivamente en las cuatro tablas de pruebas.
 - Corregidos estado sugerido de parlays con anulaciones, cancelación de edición y exclusión de valores no finitos de ROI; nueve pruebas financieras aprobadas.
 - Total: 24 pruebas automatizadas locales aprobadas (9 recuperación, 6 integración simulada, 9 financieras).
-- Texto íntegro de los 27 prompts aún no localizado; no se afirma integración completa ni automatización de investigación.
+- Actualización de cierre: los 26 textos originales ya están recuperados y catalogados. No se afirma integración funcional ni automatización de investigación.
 - La actualización ficha/historial de RC1 Fase 2 se mantiene como diagnóstico; no se libera como sincronización bidireccional.
