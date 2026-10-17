@@ -35,6 +35,13 @@
     if (clean.odds && (!Number.isFinite(Number(clean.odds)) || Number(clean.odds) <= 1)) return null;
     if (clean.prob && (!Number.isFinite(Number(clean.prob)) || Number(clean.prob) < 0 || Number(clean.prob) > 100)) return null;
     if (clean.line && !Number.isFinite(Number(clean.line))) return null;
+    // An optional report is data, never authority to validate or promote a recovered record.
+    if (r.analysis_report !== undefined) {
+      if (typeof r.analysis_report !== 'string' || r.analysis_report.length > 200000) return null;
+      try { const ar = JSON.parse(r.analysis_report); if (!ar || ar.version !== '1.0' || !ar.case || !ar.report) return null; }
+      catch { return null; }
+      clean.analysis_report = r.analysis_report;
+    }
     clean.modules = r.modules.filter(x => MODULES.includes(x));
     clean.sources = r.sources.filter(x => SOURCES.includes(x));
     clean.status = 'En análisis';

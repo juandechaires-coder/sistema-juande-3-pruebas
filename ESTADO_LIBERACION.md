@@ -64,3 +64,12 @@ La subida de archivos y la compilación sintáctica no certifican esas pruebas f
 - Total: 24 pruebas automatizadas locales aprobadas (9 recuperación, 6 integración simulada, 9 financieras).
 - Actualización de cierre: los 26 textos originales ya están recuperados y catalogados. No se afirma integración funcional ni automatización de investigación.
 - La actualización ficha/historial de RC1 Fase 2 se mantiene como diagnóstico; no se libera como sincronización bidireccional.
+
+
+## Integración de análisis · 17 de octubre de 2026
+
+Los 26 originales tienen versiones operativas 1.0 y acceso desde Inicio, Radar y fichas. El asistente en `analisis.html` selecciona enfoques por rol/mercado, prepara solicitudes para análisis externo, recibe informes estructurados, exige evidencia y dato decisivo, calcula EV con pushes y sensibilidad, y conserva revisiones. Permite crear ficha y aplicar un dictamen revisado en las tres secciones del Radar. No crea apuestas.
+
+El informe completo se adjunta y conserva en la recuperación compatible; su estado vuelve a «En análisis / Sin calificar». Producción y base de datos no se modifican. No hay inferencia de IA ni búsqueda de datos automática en el sitio. Ver `prompts/METODOLOGIA.md`.
+
+Validación local: 24 escenarios previos y pruebas nuevas del motor, compatibilidad de recuperación y clasificación del Radar; comprobación de sintaxis e integridad de originales. No se afirma una prueba visual en un navegador real ni validación de un modelo predictivo.

@@ -1,56 +1,59 @@
-# Prompts originales recuperados
+# Prompts originales y versiones operativas
 
-1. `originales/touchdown_prop_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Touchdown. Su número dentro de los 26 originales todavía no está identificado. Guardado íntegro; aún no se ejecuta desde la aplicación.
+Integración del 17 de octubre de 2026: [metodología y uso](METODOLOGIA.md), [asistente de análisis](../analisis.html). Los 26 originales se conservan intactos. Cada enfoque dispone de una versión 1.0 en `operativos/`; la aplicación prepara solicitudes y evalúa informes aportados, con razonamiento externo. No ejecuta IA ni consulta cuotas automáticamente.
 
-2. `originales/goal_line_role_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Touchdown, vinculado a Running Back. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
 
-3. `originales/prop_pricing_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Market & Pricing, vinculado a Touchdown. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+1. `originales/touchdown_prop_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Touchdown. Su número dentro de los 26 originales todavía no está identificado. Original íntegro; versión operativa integrada en el asistente de análisis con razonamiento externo.
 
-4. `originales/live_betting_latency_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Live Market. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+2. `originales/goal_line_role_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Touchdown, vinculado a Running Back. Número original sin identificar. Original íntegro; versión operativa integrada en el asistente de análisis con razonamiento externo.
 
-5. `originales/live_line_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Live Market. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+3. `originales/prop_pricing_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Market & Pricing, vinculado a Touchdown. Número original sin identificar. Original íntegro; versión operativa integrada en el asistente de análisis con razonamiento externo.
 
-6. `originales/in_play_discipline_check.txt` — texto entregado por Juande el 16 de octubre de 2026; control transversal de disciplina y exposición, vinculado a Live Market. La especificación previa asigna disciplina al prompt 7, pero su correspondencia exacta aún no se da por confirmada. Guardado íntegro; aún no se ejecuta desde la aplicación.
+4. `originales/live_betting_latency_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Live Market. Número original sin identificar. Original íntegro; versión operativa integrada en el asistente de análisis con razonamiento externo.
 
-7. `originales/scripted_drive_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo First Quarter. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+5. `originales/live_line_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Live Market. Número original sin identificar. Original íntegro; versión operativa integrada en el asistente de análisis con razonamiento externo.
 
-8. `originales/early_down_defense_tempo_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo First Quarter. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+6. `originales/in_play_discipline_check.txt` — texto entregado por Juande el 16 de octubre de 2026; control transversal de disciplina y exposición, vinculado a Live Market. La especificación previa asigna disciplina al prompt 7, pero su correspondencia exacta aún no se da por confirmada. Original íntegro; versión operativa integrada en el asistente de análisis con razonamiento externo.
 
-9. `originales/first_quarter_line_consistency_checker.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo First Quarter, vinculado a Market & Pricing. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+7. `originales/scripted_drive_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo First Quarter. Número original sin identificar. Original íntegro; versión operativa integrada en el asistente de análisis con razonamiento externo.
 
-10. `originales/receiver_separation_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Receiver. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+8. `originales/early_down_defense_tempo_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo First Quarter. Número original sin identificar. Original íntegro; versión operativa integrada en el asistente de análisis con razonamiento externo.
 
-11. `originales/yards_after_catch_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Receiver. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+9. `originales/first_quarter_line_consistency_checker.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo First Quarter, vinculado a Market & Pricing. Número original sin identificar. Original íntegro; versión operativa integrada en el asistente de análisis con razonamiento externo.
 
-12. `originales/quarterback_impact_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Receiver. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+10. `originales/receiver_separation_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Receiver. Número original sin identificar. Original íntegro; versión operativa integrada en el asistente de análisis con razonamiento externo.
 
-13. `originales/attribution_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Player Performance, con aplicación transversal a la evaluación individual. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+11. `originales/yards_after_catch_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Receiver. Número original sin identificar. Original íntegro; versión operativa integrada en el asistente de análisis con razonamiento externo.
 
-14. `originales/hidden_value_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Player Performance, con aplicación transversal a roles y aportaciones individuales. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+12. `originales/quarterback_impact_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Receiver. Número original sin identificar. Original íntegro; versión operativa integrada en el asistente de análisis con razonamiento externo.
 
-15. `originales/repeatability_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Player Performance, vinculado a la evaluación de estabilidad y regresión. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+13. `originales/attribution_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Player Performance, con aplicación transversal a la evaluación individual. Número original sin identificar. Original íntegro; versión operativa integrada en el asistente de análisis con razonamiento externo.
 
-16. `originales/backfield_workload_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Running Back. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+14. `originales/hidden_value_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Player Performance, con aplicación transversal a roles y aportaciones individuales. Número original sin identificar. Original íntegro; versión operativa integrada en el asistente de análisis con razonamiento externo.
 
-17. `originales/run_matchup_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Running Back, vinculado a Team Strength & Matchup. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+15. `originales/repeatability_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Player Performance, vinculado a la evaluación de estabilidad y regresión. Número original sin identificar. Original íntegro; versión operativa integrada en el asistente de análisis con razonamiento externo.
 
-18. `originales/running_back_game_script_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Running Back, vinculado a Team Strength & Matchup. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+16. `originales/backfield_workload_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Running Back. Número original sin identificar. Original íntegro; versión operativa integrada en el asistente de análisis con razonamiento externo.
 
-19. `originales/team_strength_gap_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Team Strength & Matchup, vinculado a Market & Pricing. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+17. `originales/run_matchup_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Running Back, vinculado a Team Strength & Matchup. Número original sin identificar. Original íntegro; versión operativa integrada en el asistente de análisis con razonamiento externo.
 
-20. `originales/quarterback_spread_impact_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Team Strength & Matchup, vinculado a Market & Pricing. Distinto del prompt sobre impacto del quarterback en receptores. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+18. `originales/running_back_game_script_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Running Back, vinculado a Team Strength & Matchup. Número original sin identificar. Original íntegro; versión operativa integrada en el asistente de análisis con razonamiento externo.
 
-21. `originales/schedule_situation_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Team Strength & Matchup, vinculado a Market & Pricing. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+19. `originales/team_strength_gap_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Team Strength & Matchup, vinculado a Market & Pricing. Número original sin identificar. Original íntegro; versión operativa integrada en el asistente de análisis con razonamiento externo.
 
-22. `originales/unit_matchup_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Team Strength & Matchup, vinculado a Market & Pricing. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+20. `originales/quarterback_spread_impact_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Team Strength & Matchup, vinculado a Market & Pricing. Distinto del prompt sobre impacto del quarterback en receptores. Número original sin identificar. Original íntegro; versión operativa integrada en el asistente de análisis con razonamiento externo.
 
-23. `originales/line_movement_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Market & Pricing, vinculado a Team Strength & Matchup. Incluye íntegra la frase final recibida. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+21. `originales/schedule_situation_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Team Strength & Matchup, vinculado a Market & Pricing. Número original sin identificar. Original íntegro; versión operativa integrada en el asistente de análisis con razonamiento externo.
 
-24. `originales/goal_line_usage_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Touchdown, vinculado a Running Back y Receiver según el rol. Se conserva separado de goal_line_role_analyst: incluye targets y paquetes con tight ends. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+22. `originales/unit_matchup_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Team Strength & Matchup, vinculado a Market & Pricing. Número original sin identificar. Original íntegro; versión operativa integrada en el asistente de análisis con razonamiento externo.
 
-25. `originales/red_zone_usage_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Touchdown, vinculado a Running Back y Receiver según el rol. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+23. `originales/line_movement_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Market & Pricing, vinculado a Team Strength & Matchup. Incluye íntegra la frase final recibida. Número original sin identificar. Original íntegro; versión operativa integrada en el asistente de análisis con razonamiento externo.
 
-26. `originales/scoring_chances_game_script_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Touchdown, vinculado a Running Back, Receiver y Team Strength & Matchup según el rol. Se conserva separado del guion de acarreos. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+24. `originales/goal_line_usage_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Touchdown, vinculado a Running Back y Receiver según el rol. Se conserva separado de goal_line_role_analyst: incluye targets y paquetes con tight ends. Número original sin identificar. Original íntegro; versión operativa integrada en el asistente de análisis con razonamiento externo.
+
+25. `originales/red_zone_usage_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Touchdown, vinculado a Running Back y Receiver según el rol. Número original sin identificar. Original íntegro; versión operativa integrada en el asistente de análisis con razonamiento externo.
+
+26. `originales/scoring_chances_game_script_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Touchdown, vinculado a Running Back, Receiver y Team Strength & Matchup según el rol. Se conserva separado del guion de acarreos. Número original sin identificar. Original íntegro; versión operativa integrada en el asistente de análisis con razonamiento externo.
 
 ## Revisión pendiente del prompt Anytime TD
 
@@ -331,4 +334,4 @@
 - Mantener los tres dictámenes, permitiendo información insuficiente o efecto mixto. Un guion favorable no demuestra valor sin cuota y probabilidad sustentada.
 - No se recibieron jugador, partido ni expectativas concretas. El original queda intacto.
 
-Estado: recuperación completa de los 26 textos originales. Juande confirmó el 16 de octubre de 2026 que el conjunto consta de 26 prompts, corrigiendo la estimación previa de 27. La numeración del catálogo corresponde al orden de recuperación; su orden original no se ha confirmado. Los textos se conservan íntegros y las observaciones de implementación están separadas. Su conservación no equivale a integración funcional: la ejecución desde la aplicación sigue pendiente.
+Estado: recuperación completa de los 26 textos originales. Juande confirmó el 16 de octubre de 2026 que el conjunto consta de 26 prompts, corrigiendo la estimación previa de 27. La numeración del catálogo corresponde al orden de recuperación; su orden original no se ha confirmado. Los textos se conservan íntegros y las observaciones de implementación están separadas. Integrados: selección de enfoques, solicitudes, informes, validación estructural, cálculo de precio y clasificación revisable en el Radar. La inferencia de IA y obtención de datos siguen siendo externas; no hay ejecución autónoma del análisis.
