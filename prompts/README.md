@@ -40,6 +40,8 @@
 
 20. `originales/quarterback_spread_impact_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Team Strength & Matchup, vinculado a Market & Pricing. Distinto del prompt sobre impacto del quarterback en receptores. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
 
+21. `originales/schedule_situation_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Team Strength & Matchup, vinculado a Market & Pricing. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+
 ## Revisión pendiente del prompt Anytime TD
 
 - Los porcentajes históricos se conservan como afirmaciones del texto original. Falta una fuente verificable y delimitar liga, temporadas y definición del denominador; no se consideran datos validados.
@@ -248,4 +250,15 @@
 - La magnitud y primacía del cambio de quarterback se conservan como afirmaciones del original, no como una regla universal demostrada para cualquier jugador o partido.
 - Una diferencia estimada en puntos no demuestra EV positivo sin precio y probabilidad de cubrir. No se recibieron equipos, estados ni líneas concretas. El original queda intacto.
 
-Estado: 20 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
+## Revisión pendiente del prompt de situación de calendario
+
+- Definir partido, liga, fecha, sede, hora local y zona horaria; verificar calendario y descanso de ambos equipos con fuentes actuales. «Tonight» requiere una fecha y zona explícitas al ejecutar el análisis.
+- Diferenciar descanso nominal de horas reales entre partidos; verificar origen y dirección del viaje, cambios horarios y días de adaptación cuando se conozcan. No deducir itinerarios reales solo de la distancia entre ciudades.
+- Evaluar evidencia histórica del desajuste específico con periodo, muestra, magnitud e incertidumbre, controlando fuerza de equipos, localía y otros factores. No convertir una correlación o tendencia ATS seleccionada en efecto causal.
+- Separar impacto sobre rendimiento de rentabilidad contra el spread: que un factor importe no implica que el mercado lo ignore.
+- Para expresar un ajuste en puntos hace falta una referencia/modelo explícito. Evitar doble conteo de viaje, localía, descanso y cambios ya incorporados en el rating o línea; sin método, describir dirección condicionada sin inventar una cifra.
+- Rareza y relevancia no son equivalentes: una situación inusual puede carecer de muestra y una recurrente puede tener efecto medible. Conservar la regla del original sin usar rareza por sí sola como prueba.
+- Diferenciar ausencia de evidencia de evidencia de efecto pequeño; permitir resultado neutral o información insuficiente sin forzar un ángulo.
+- No se recibieron equipos, calendario ni spread concretos. El original queda intacto.
+
+Estado: 21 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
