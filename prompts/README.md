@@ -44,6 +44,8 @@
 
 22. `originales/unit_matchup_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Team Strength & Matchup, vinculado a Market & Pricing. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
 
+23. `originales/line_movement_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Market & Pricing, vinculado a Team Strength & Matchup. Incluye íntegra la frase final recibida. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+
 ## Revisión pendiente del prompt Anytime TD
 
 - Los porcentajes históricos se conservan como afirmaciones del texto original. Falta una fuente verificable y delimitar liga, temporadas y definición del denominador; no se consideran datos validados.
@@ -275,4 +277,16 @@
 - Mantener los tres dictámenes solicitados y permitir información insuficiente sin forzar un desajuste dominante.
 - No se recibieron equipos, métricas de unidades ni spread concretos. El original queda intacto.
 
-Estado: 22 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
+## Revisión pendiente del prompt de movimiento de líneas
+
+- Identificar partido, equipo de referencia, signo, casa, mercado, reglas, cuotas y horas de apertura/consulta. No comparar aperturas de distintas casas o momentos como si fueran una sola serie.
+- Mostrar cambio firmado y magnitud absoluta. Un cambio de A −3 a A −5 equivale a dos puntos hacia A y a un precio de hándicap menos favorable para quien toma A; distinguir movimiento de línea de movimiento de cuota sin cambio de puntos.
+- Relacionar noticias verificadas con su cronología y con lo ya anticipado por el mercado. Coincidencia temporal no prueba causalidad y una noticia real puede estar incorporada o provocar sobreajuste.
+- Porcentajes públicos requieren fuente, hora, casas cubiertas y distinción entre tickets e importe. No representan necesariamente todo el mercado ni permiten identificar por sí solos apostadores profesionales.
+- No inferir «sharp money», tamaño de apuestas o causa pública únicamente por dirección, rapidez, reverse line movement o volumen agregado. Etiquetar como desconocido cuando no exista evidencia suficiente.
+- Considerar liquidez, límites, ajustes de exposición y seguimiento entre casas como explicaciones posibles, sin afirmar mecanismos internos no observados.
+- Valorar cruces de números clave y cambio de precio, además de puntos. Movimiento informativo no equivale a valor disponible en la cotización actual.
+- La dicotomía información/ruido puede quedar indeterminada: permitir evidencia insuficiente o componentes mixtos sin forzar una causa. La frase final promocional se conserva como original y no garantiza rapidez ni exactitud.
+- No se recibieron líneas ni noticias concretas. El original queda intacto.
+
+Estado: 23 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
