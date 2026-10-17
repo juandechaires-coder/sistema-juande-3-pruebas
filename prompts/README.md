@@ -50,6 +50,8 @@
 
 25. `originales/red_zone_usage_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Touchdown, vinculado a Running Back y Receiver según el rol. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
 
+26. `originales/scoring_chances_game_script_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Touchdown, vinculado a Running Back, Receiver y Team Strength & Matchup según el rol. Se conserva separado del guion de acarreos. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+
 ## Revisión pendiente del prompt Anytime TD
 
 - Los porcentajes históricos se conservan como afirmaciones del texto original. Falta una fuente verificable y delimitar liga, temporadas y definición del denominador; no se consideran datos validados.
@@ -317,4 +319,16 @@
 - Mantener los tres dictámenes, permitiendo rol mixto o información insuficiente. Participación de anotación no garantiza touchdown ni valor a una cuota concreta.
 - No se recibieron jugador, rival ni recuentos concretos. El original queda intacto.
 
-Estado: 25 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
+## Revisión pendiente del prompt de guion para oportunidades de anotar
+
+- Definir jugador, posición, vías de anotación y mercado. Distinguir corredor, receptor e híbrido antes de relacionar el guion con su uso; no aplicar automáticamente un criterio terrestre a un receptor.
+- Tratar ventaja cómoda, partido cerrado y desventaja como escenarios inciertos. Para justificar el escenario principal registrar spread, total, ritmo esperado, disponibilidad, fuente y hora; ser favorito no garantiza dominar.
+- «Leading teams run, trailing teams throw» es una orientación del original, no una ley de cada equipo o jugada. Importan margen, tiempo restante, tendencias del entrenador, personal y cambios de ritmo.
+- Relacionar volumen del equipo con reparto individual, acarreos cerca de anotar, targets, rutas y explosividad. Más pases o carreras no implican automáticamente más oportunidades de touchdown para este jugador; una ventaja amplia puede traer suplentes.
+- Separar número de oportunidades, calidad de campo y probabilidad de conversión. La desventaja puede aumentar pases pero reducir visitas a zona roja; no concluir más touchdowns solo por más volumen.
+- Identificar el escenario que más debilita la hipótesis sin afirmar que elimina toda posibilidad de anotar. «Kill this angle entirely» no equivale a probabilidad cero.
+- Cualquier cambio cuantificado de probabilidad necesita modelo, supuestos y muestra documentados; sin ellos expresar una dirección condicionada e incertidumbre.
+- Mantener los tres dictámenes, permitiendo información insuficiente o efecto mixto. Un guion favorable no demuestra valor sin cuota y probabilidad sustentada.
+- No se recibieron jugador, partido ni expectativas concretas. El original queda intacto.
+
+Estado: 26 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
