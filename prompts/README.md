@@ -28,6 +28,8 @@
 
 14. `originales/hidden_value_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Player Performance, con aplicación transversal a roles y aportaciones individuales. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
 
+15. `originales/repeatability_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Player Performance, vinculado a la evaluación de estabilidad y regresión. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+
 ## Revisión pendiente del prompt Anytime TD
 
 - Los porcentajes históricos se conservan como afirmaciones del texto original. Falta una fuente verificable y delimitar liga, temporadas y definición del denominador; no se consideran datos validados.
@@ -170,4 +172,15 @@
 - La afirmación de que es la excusa más común se conserva como parte del original, sin tratarla como frecuencia verificada. Los dictámenes no garantizan resultados.
 - No se recibió jugador, estadísticas ni evidencia de asignaciones concretas. El original queda intacto.
 
-Estado: 14 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
+## Revisión pendiente del prompt de repetibilidad
+
+- Separar control individual, influencia compartida y variación aleatoria. Volumen y uso dependen también de entrenador, compañeros, lesiones y guion; no clasificarlos automáticamente como controlados por el jugador.
+- Definir cada tasa y su denominador, fuente, periodo y muestra de oportunidades. Touchdowns, intercepciones no atrapadas, recuperaciones de fumbles y errores rivales pueden combinar habilidad, contexto y azar; no tratarlos como suerte pura por categoría.
+- Para afirmar que una variable estuvo por encima o por debajo de lo esperable, justificar una referencia ajustada al rol, calidad de oportunidades y contexto, con incertidumbre. Sin referencia no cuantificar cuánto estuvo caliente o frío.
+- Separar cambios de rol o proceso de fluctuaciones del resultado. Una racha puede contener mejoras reales; no fijar de antemano un declive solo porque hubo resultados favorables.
+- Si se proyecta regresión, explicar horizonte, supuestos y método de ajuste según muestra y estabilidad de la métrica. No usar automáticamente la media de liga ni suponer que una muestra mayor elimina cambios de contexto.
+- Regresar hacia una expectativa no implica que el azar compense resultados pasados: no pronosticar una mala racha para saldar una buena, ni prometer mejora tras resultados negativos.
+- Mantener los tres dictámenes solicitados y permitir información insuficiente o componentes mixtos. Una proyección de producción no demuestra valor de una apuesta sin línea, cuota y distribución estimada.
+- No se recibió jugador, línea estadística ni tamaño de muestra concretos. El original queda intacto.
+
+Estado: 15 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
