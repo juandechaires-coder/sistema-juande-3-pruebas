@@ -36,6 +36,8 @@
 
 18. `originales/running_back_game_script_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Running Back, vinculado a Team Strength & Matchup. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
 
+19. `originales/team_strength_gap_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Team Strength & Matchup, vinculado a Market & Pricing. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+
 ## Revisión pendiente del prompt Anytime TD
 
 - Los porcentajes históricos se conservan como afirmaciones del texto original. Falta una fuente verificable y delimitar liga, temporadas y definición del denominador; no se consideran datos validados.
@@ -221,4 +223,16 @@
 - Explicar el escenario que más reduce el trabajo individual y mantener los tres dictámenes, permitiendo información insuficiente. Una dirección de volumen no demuestra valor sin línea, cuota y distribución estimada.
 - No se recibieron jugador, partido ni expectativas concretas. El original queda intacto.
 
-Estado: 18 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
+## Revisión pendiente del prompt de brecha de fuerza
+
+- Definir liga, temporada, muestra, fuente y unidades de las métricas de ambos equipos. Ajustar comparabilidad por rivales, ritmo, situación y disponibilidad; rendimiento observado no equivale sin incertidumbre a fuerza real.
+- Para convertir eficiencia o ratings a puntos hace falta un modelo o escala calibrada y documentada. No tratar puntos de diferencial, yardas por jugada o porcentajes de una métrica como unidades intercambiables ni inventar un hándicap si falta método.
+- Separar rating en campo neutral de proyección para este partido. Incorporar localía, sede neutral si corresponde, quarterback y otras bajas, descanso y contexto sin contar dos veces efectos ya incluidos en el rating.
+- Explicitar convención de signo y equipo de referencia. Si se proyecta que A gana por m puntos, su hándicap justo orientativo es −m; mostrar la diferencia frente a la línea ofrecida y qué lado favorece.
+- Registrar casa, hora, cuota, mercado y reglas de liquidación. Una diferencia de puntos no demuestra una probabilidad de cubrir ni EV positivo sin una distribución del margen y el precio.
+- Definir qué significan «soft» y «tight» y un criterio de cercanía acorde con incertidumbre y números clave, sin elegir umbrales arbitrarios como prueba de ventaja.
+- La regla sobre récord frente a rendimiento se conserva como orientación del original; no presentar una métrica aislada como verdad ni asumir que el mercado se basa solo en victorias y derrotas.
+- Mantener los tres dictámenes solicitados, permitiendo información insuficiente cuando no exista una proyección sustentada.
+- No se recibieron equipos, métricas ni hándicap concretos. El original queda intacto.
+
+Estado: 19 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
