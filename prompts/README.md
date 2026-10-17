@@ -16,6 +16,8 @@
 
 8. `originales/early_down_defense_tempo_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo First Quarter. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
 
+9. `originales/first_quarter_line_consistency_checker.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo First Quarter, vinculado a Market & Pricing. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+
 ## Revisión pendiente del prompt Anytime TD
 
 - Los porcentajes históricos se conservan como afirmaciones del texto original. Falta una fuente verificable y delimitar liga, temporadas y definición del denominador; no se consideran datos validados.
@@ -93,4 +95,16 @@
 - El punto de partida debe ser el mercado exacto (hándicap o total), equipo/signo y cuota. Una dirección táctica favorable no demuestra por sí misma valor para apostar.
 - No se recibieron equipos, métricas, posesión inicial ni líneas concretas. El original queda intacto.
 
-Estado: 8 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
+## Revisión pendiente del diagnóstico de coherencia del primer cuarto
+
+- Verificar fuente, periodos, muestras y denominadores de 20%, 1.0, 2.7, 37%, dos tercios, 92.5% y 24%. Los cocientes citados son supuestos del original, no parámetros calibrados del sistema.
+- La diferencia media de puntos de los locales no identifica por sí sola un efecto causal puro de localía: requiere controlar fuerza de rivales, calendario y otros factores. No usar automáticamente 2.7 como ventaja actual de cualquier estadio.
+- El hándicap completo ya incorpora localía y otra información; hace falta una estimación independiente de esa contribución para separarla sin doble conteo. Fijar convención de signos y equipo antes de calcular.
+- Como identidad diagnóstica bajo supuestos explícitos: margen esperado del local en 1Q = s × (margen esperado del local en partido − H_partido) + H_1Q. Si se usa H_1Q = h × H_partido, queda s × margen_partido + (h − s) × H_partido. No confundir margen esperado con el signo opuesto del hándicap cotizado.
+- Diferenciar puntos de un equipo, marcador conjunto y margen entre equipos al definir números clave. La frecuencia de un marcador no es automáticamente la probabilidad de push o de cubrir un hándicap.
+- Para el empate faltan las cuotas del mercado de tres vías (idealmente las tres). Mostrar probabilidad implícita, tratamiento del margen y modelo de probabilidad de empate antes de llamarla generosa.
+- Definir y verificar también el total 1Q: una proporción histórica no garantiza proporcionalidad del total de un partido concreto.
+- Mantener el carácter de diagnóstico: una discrepancia indica qué investigar, no una apuesta aprobada.
+- No se recibieron equipos, líneas ni cuotas concretas. El original queda intacto.
+
+Estado: 9 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
