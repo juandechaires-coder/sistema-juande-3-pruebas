@@ -24,6 +24,8 @@
 
 12. `originales/quarterback_impact_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Receiver. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
 
+13. `originales/attribution_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Player Performance, con aplicación transversal a la evaluación individual. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+
 ## Revisión pendiente del prompt Anytime TD
 
 - Los porcentajes históricos se conservan como afirmaciones del texto original. Falta una fuente verificable y delimitar liga, temporadas y definición del denominador; no se consideran datos validados.
@@ -144,4 +146,15 @@
 - Mantener los tres dictámenes solicitados, permitiendo información insuficiente cuando no se pueda atribuir el efecto. Ningún dictamen garantiza producción ni valor de una apuesta.
 - No se recibió receptor, quarterback ni datos concretos. El original queda intacto.
 
-Estado: 12 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
+## Revisión pendiente del prompt de atribución
+
+- Conservar la línea estadística oficial y sus definiciones. Separar el registro del resultado de la valoración causal; una intercepción o sack correctamente registrado no es un error de anotación por el mero hecho de existir responsabilidad compartida.
+- Para atribuir cada jugada se necesitan identificadores, contexto y evidencia verificable (vídeo, play-by-play o evaluación documentada). Un pase desviado o presión inmediata no exculpa automáticamente al quarterback ni identifica por sí solo al responsable.
+- Permitir responsabilidad compartida y casos indeterminados entre jugador, compañeros, esquema y situación. No forzar un culpable único ni inferir asignaciones de protección o cobertura que no se conocen.
+- Revisar también los resultados positivos con criterios simétricos, considerando aportes del jugador y ayudas de compañeros, rival o diseño.
+- Cualquier línea ajustada es una estimación analítica contrafactual, no una estadística oficial ni el resultado garantizado de jugadas alternativas. Explicar reglas, supuestos e incertidumbre; si no se puede cuantificar, presentar atribuciones cualitativas sin inventar números.
+- La liquidación de apuestas depende de las reglas de la casa y la fuente oficial aplicable; la atribución analítica no modifica por sí sola el resultado liquidado.
+- Mantener los tres dictámenes solicitados y permitir información insuficiente o resultados mixtos cuando no exista evidencia para una conclusión global.
+- No se recibió jugador, línea estadística ni jugadas concretas. El original queda intacto.
+
+Estado: 13 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
