@@ -18,6 +18,8 @@
 
 9. `originales/first_quarter_line_consistency_checker.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo First Quarter, vinculado a Market & Pricing. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
 
+10. `originales/receiver_separation_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Receiver. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+
 ## Revisión pendiente del prompt Anytime TD
 
 - Los porcentajes históricos se conservan como afirmaciones del texto original. Falta una fuente verificable y delimitar liga, temporadas y definición del denominador; no se consideran datos validados.
@@ -107,4 +109,15 @@
 - Mantener el carácter de diagnóstico: una discrepancia indica qué investigar, no una apuesta aprobada.
 - No se recibieron equipos, líneas ni cuotas concretas. El original queda intacto.
 
-Estado: 9 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
+## Revisión pendiente del prompt de separación de receptores
+
+- Definir fuente, temporada, muestra y metodología de separación: en el lanzamiento, recepción, todas las rutas o solo targets. Estas mediciones no son intercambiables ni resumen por sí solas toda la capacidad de desmarque.
+- Diferenciar tasa de éxito en recepciones disputadas (atrapadas/intentos disputados), proporción de targets disputados y catch rate total. No afirmar que uno sostiene al otro sin datos conjuntos.
+- Registrar profundidad de target, precisión/timing del quarterback, rutas, alineación y cobertura. No inferir rutas ganadoras o coberturas problemáticas a partir solo de tamaño, velocidad o catch rate agregado.
+- Separar rendimiento por ruta de frecuencia de uso: una ruta poco utilizada no demuestra incapacidad, y una muestra pequeña de éxitos no prueba dominio.
+- No fijar regresión inevitable de recepciones disputadas sin muestra, comparación y evidencia de estabilidad; un perfil puede combinar separación y habilidad en tráfico.
+- Conservar los dictámenes originales, permitiendo perfil mixto o información insuficiente cuando los datos no sostengan una categoría única.
+- La advertencia sobre desaparecer ante un corner físico es una hipótesis contextual, no un desenlace garantizado.
+- No se recibió jugador ni datos concretos. El original queda intacto.
+
+Estado: 10 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
