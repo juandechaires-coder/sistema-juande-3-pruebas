@@ -34,6 +34,8 @@
 
 17. `originales/run_matchup_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Running Back, vinculado a Team Strength & Matchup. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
 
+18. `originales/running_back_game_script_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Running Back, vinculado a Team Strength & Matchup. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+
 ## Revisión pendiente del prompt Anytime TD
 
 - Los porcentajes históricos se conservan como afirmaciones del texto original. Falta una fuente verificable y delimitar liga, temporadas y definición del denominador; no se consideran datos validados.
@@ -208,4 +210,15 @@
 - Mantener los tres dictámenes y permitir incertidumbre. Un frente favorable no implica superar una línea sin considerar carga esperada, línea, cuota y distribución del resultado.
 - No se recibieron jugador, rival ni datos concretos. El original queda intacto.
 
-Estado: 17 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
+## Revisión pendiente del prompt de guion para corredores
+
+- Tratar ventaja tardía, partido cerrado y desventaja como escenarios con incertidumbre. Ser favorito no garantiza liderar al final; para estimar el escenario principal registrar línea, cuota, total, momento de consulta y contexto.
+- Vincular cada escenario al rol individual: reparto de acarreos, corredor de cierre, sustituciones con ventaja amplia y participación en pase. Más carreras del equipo no garantizan más acarreos para este jugador.
+- Distinguir acarreos, targets, recepciones y volumen total. Un corredor receptor puede perder carreras al ir detrás y ganar oportunidades por aire; evaluar el mercado específico.
+- Para cuantificar el cambio de acarreos, usar muestras comparables por margen y tiempo, disponibilidad y esquema, o un modelo explícito. Sin ello describir dirección condicionada sin inventar cifras.
+- Correr para consumir reloj no garantiza ganancias cortas ni fáciles: considerar cajas defensivas, posición de campo, downs y posibles kneel-downs del quarterback. La frase «cheapest yards» se conserva como formulación del original, no como eficiencia demostrada.
+- «Losing teams abandon the run entirely» es una afirmación absoluta del original; la respuesta depende de magnitud de la desventaja, tiempo, ritmo y decisiones del equipo. No convertirla en regla automática.
+- Explicar el escenario que más reduce el trabajo individual y mantener los tres dictámenes, permitiendo información insuficiente. Una dirección de volumen no demuestra valor sin línea, cuota y distribución estimada.
+- No se recibieron jugador, partido ni expectativas concretas. El original queda intacto.
+
+Estado: 18 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
