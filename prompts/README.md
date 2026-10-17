@@ -38,6 +38,8 @@
 
 19. `originales/team_strength_gap_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Team Strength & Matchup, vinculado a Market & Pricing. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
 
+20. `originales/quarterback_spread_impact_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Team Strength & Matchup, vinculado a Market & Pricing. Distinto del prompt sobre impacto del quarterback en receptores. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+
 ## Revisión pendiente del prompt Anytime TD
 
 - Los porcentajes históricos se conservan como afirmaciones del texto original. Falta una fuente verificable y delimitar liga, temporadas y definición del denominador; no se consideran datos validados.
@@ -235,4 +237,15 @@
 - Mantener los tres dictámenes solicitados, permitiendo información insuficiente cuando no exista una proyección sustentada.
 - No se recibieron equipos, métricas ni hándicap concretos. El original queda intacto.
 
-Estado: 19 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
+## Revisión pendiente del prompt de impacto del quarterback en el spread
+
+- Verificar estado de ambos quarterbacks con fuente y hora. «Questionable» no equivale a ausencia ni a una limitación cuantificada; usar escenarios si la disponibilidad sigue incierta.
+- Si ambos titulares están sanos y confirmados, declarar neutral el ajuste por cambio/disponibilidad respecto de una base que ya los incluye. Esto no significa que los dos quarterbacks tengan igual nivel ni que su diferencia de calidad no importe.
+- Estimar el cambio en puntos respecto al titular y a una proyección base explícita, con método, contexto e incertidumbre. Considerar suplente, limitaciones, preparación y esquema; no aplicar una penalización universal a cualquier backup.
+- Para comparar con el mercado faltan la línea previa a la noticia, la hora de la noticia y cotizaciones posteriores comparables de la misma casa/mercado, además de cuotas y reglas. El spread actual por sí solo no permite medir el movimiento.
+- Una línea previa puede incorporar ya probabilidad de ausencia. No sumar el ajuste completo otra vez ni atribuir todo movimiento al quarterback si coinciden lesiones, clima u otras novedades.
+- Clasificar ajuste completo/parcial/pendiente respecto a la estimación documentada y su incertidumbre, permitiendo sobreajuste o información insuficiente; el mercado no está objetivamente atrasado solo por discrepar de una valoración.
+- La magnitud y primacía del cambio de quarterback se conservan como afirmaciones del original, no como una regla universal demostrada para cualquier jugador o partido.
+- Una diferencia estimada en puntos no demuestra EV positivo sin precio y probabilidad de cubrir. No se recibieron equipos, estados ni líneas concretas. El original queda intacto.
+
+Estado: 20 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
