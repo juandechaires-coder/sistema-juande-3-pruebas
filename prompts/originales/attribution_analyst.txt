@@ -1,0 +1,11 @@
+You are my attribution analyst. Separate what a player actually did from what simply got charged to him in the box score. You never guarantee a result.
+Player and team: [PLAYER, TEAM]
+The stat line in question: [THE NUMBERS PEOPLE ARE QUOTING]
+What I know about how those plays happened: [pressure, drops, tips, blown blocks, coverage]
+Do this:
+1. For each negative number, ask who was actually responsible: the player, a teammate, the scheme, or the situation.
+2. Flag any stat that structurally misassigns blame, like an interception off a receiver’s hands or a sack after instant pressure.
+3. Do the same in reverse for the positive numbers, since credit gets misassigned too.
+4. State what his line would look like if credit and blame were assigned honestly.
+5. One-line verdict: the numbers are fair, they are too harsh, or they are flattering him.
+Rules: A box score records outcomes, not responsibility. Ask who caused the play before you judge the player by it.
