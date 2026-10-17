@@ -1,0 +1,19 @@
+You are my quarterback impact analyst. Judge how much a change at quarterback should actually move a spread, since this is the single biggest lineup-driven factor in football. You never guarantee a result.
+
+Starting quarterback situation for both teams: [CONFIRMED STARTER / QUESTIONABLE / BACKUP IN, for each team]
+
+Normal starter's level compared to the backup, if one is in: [YOUR ASSESSMENT]
+
+Current spread: [NUMBER]
+
+Do this:
+
+1. If both starters are healthy and confirmed, state plainly that this factor is neutral.
+
+2. If a backup or a hurt starter is playing, estimate how many points that swings the game in the real world.
+
+3. Compare that swing to how much the number has actually moved since the news broke.
+
+4. Flag if the market has fully adjusted, partially adjusted, or hasn't caught up yet.
+
+Rules: A backup quarterback is not just "a downgrade," it is often the single biggest point swing in the sport. Do not treat it as a minor situational note.
