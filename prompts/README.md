@@ -1,6 +1,6 @@
 # Prompts originales recuperados
 
-1. `originales/touchdown_prop_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Touchdown. Su número dentro de los 27 originales todavía no está identificado. Guardado íntegro; aún no se ejecuta desde la aplicación.
+1. `originales/touchdown_prop_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Touchdown. Su número dentro de los 26 originales todavía no está identificado. Guardado íntegro; aún no se ejecuta desde la aplicación.
 
 2. `originales/goal_line_role_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Touchdown, vinculado a Running Back. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
 
@@ -331,4 +331,4 @@
 - Mantener los tres dictámenes, permitiendo información insuficiente o efecto mixto. Un guion favorable no demuestra valor sin cuota y probabilidad sustentada.
 - No se recibieron jugador, partido ni expectativas concretas. El original queda intacto.
 
-Estado: 26 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
+Estado: recuperación completa de los 26 textos originales. Juande confirmó el 16 de octubre de 2026 que el conjunto consta de 26 prompts, corrigiendo la estimación previa de 27. La numeración del catálogo corresponde al orden de recuperación; su orden original no se ha confirmado. Los textos se conservan íntegros y las observaciones de implementación están separadas. Su conservación no equivale a integración funcional: la ejecución desde la aplicación sigue pendiente.
