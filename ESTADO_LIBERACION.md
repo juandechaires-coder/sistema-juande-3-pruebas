@@ -73,3 +73,10 @@ Los 26 originales tienen versiones operativas 1.0 y acceso desde Inicio, Radar y
 El informe completo se adjunta y conserva en la recuperación compatible; su estado vuelve a «En análisis / Sin calificar». Producción y base de datos no se modifican. No hay inferencia de IA ni búsqueda de datos automática en el sitio. Ver `prompts/METODOLOGIA.md`.
 
 Validación local: 24 escenarios previos y pruebas nuevas del motor, compatibilidad de recuperación y clasificación del Radar; comprobación de sintaxis e integridad de originales. No se afirma una prueba visual en un navegador real ni validación de un modelo predictivo.
+
+
+## Conexión IA directa · 17 de octubre de 2026
+
+Función `juande-analyze` activa en Supabase de pruebas. Autentica la sesión y restringe el uso al propietario; cuota diaria e idempotencia en base de datos. Frontend conectado para recibir y guardar informes sin copiar JSON desde el chat. Diagnóstico remoto: servicio responde 200, sin credencial OpenAI (`configured:false`, `enabled:false`), rechaza POST sin sesión con 401. La ejecución real con IA queda pendiente de clave y activación explícita en Secrets; no se realizó consumo pagado.
+
+13 pruebas nuevas del servicio con proveedor simulado y pruebas SQL reales revertidas de cuota/permisos. Producción y las tablas de picks/parlays no se modificaron. Ver `supabase/functions/juande-analyze/README.md`.

@@ -49,7 +49,7 @@ Los informes adjuntos se conservan al exportar/importar fichas y al recuperar un
 
 ## Límites explícitos
 
-Esta entrega integra las 26 versiones operativas, selección por rol, generación de solicitudes, captura y validación estructural de informes, cálculo de precio, revisiones, fichas y clasificación. **No integra un servicio de IA servidor, búsqueda automática de cuotas/datos, calibración propia ni un modelo predictivo nuevo.** La inferencia se realiza fuera del sitio y se devuelve como informe. No se ponen claves privadas en el navegador. Automatizar esa parte requiere un servicio autenticado, datos autorizados y un modelo validado; no basta con añadir un botón.
+Esta entrega integra las 26 versiones operativas, selección por rol, generación de solicitudes, captura y validación estructural de informes, cálculo de precio, revisiones, fichas y clasificación. **Actualización de conexión IA del 17 de octubre:** el servicio autenticado de investigación web y razonamiento está desplegado en Supabase de pruebas y conectado al botón «Investigar y analizar». Su activación requiere `OPENAI_API_KEY` y `JUANDE_AI_ENABLED=true` en los secretos de servidor. El diagnóstico real indica que todavía falta la clave; no se presenta como operativo de punta a punta. Al activarse devuelve el informe directamente a la aplicación, sin copiarlo desde el chat. Sigue sin aportar calibración propia ni un modelo predictivo nuevo, no garantiza cuotas ejecutables y no accede a casas privadas. La alternativa manual permanece disponible. Ver [configuración y controles](../supabase/functions/juande-analyze/README.md).
 
 Los datos de trabajo permanecen en este navegador hasta que el usuario exporta o usa la copia a nube de pruebas existente. Esa copia es unidireccional y no sobrescribe investigaciones existentes. Esta entrega no cambia tablas, políticas ni producción.
 
@@ -62,3 +62,8 @@ Las fuentes se usan para definiciones y diseño, no para validar todos los porce
 - [Modelos nflfastR, por sus desarrolladores](https://opensourcefootball.com/posts/2020-09-28-nflfastr-ep-wp-and-cp-models/): documentación de modelos y comprobación de calibración. No equivalen a calibración del Sistema Juande.
 
 Las fórmulas de EV anteriores se derivan de los tres posibles retornos del mercado, no de los porcentajes históricos incluidos en los prompts originales.
+
+
+## Uso directo tras activar la conexión
+
+Inicia sesión en la cuenta de pruebas dentro del asistente, completa caso y enfoques, y pulsa «Investigar y analizar». El servidor busca fuentes públicas, razona sobre los enfoques y devuelve un informe estructurado que se guarda como revisión. Las comprobaciones humanas permanecen pendientes; revisa antes de clasificar. El límite inicial es cinco investigaciones por día UTC. La API se factura aparte de ChatGPT y no se hace una consulta pagada hasta activar la conexión y pulsar el botón.
