@@ -20,6 +20,8 @@
 
 10. `originales/receiver_separation_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Receiver. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
 
+11. `originales/yards_after_catch_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Receiver. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+
 ## Revisión pendiente del prompt Anytime TD
 
 - Los porcentajes históricos se conservan como afirmaciones del texto original. Falta una fuente verificable y delimitar liga, temporadas y definición del denominador; no se consideran datos validados.
@@ -120,4 +122,14 @@
 - La advertencia sobre desaparecer ante un corner físico es una hipótesis contextual, no un desenlace garantizado.
 - No se recibió jugador ni datos concretos. El original queda intacto.
 
-Estado: 10 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
+## Revisión pendiente del prompt de yardas tras recepción
+
+- Para separar yardas totales recibidas entre aire y YAC hacen falta métricas sobre recepciones completadas de la misma muestra. El aDOT de todos los targets no equivale a yardas aéreas completadas y no permite obtenerlas restándolo de yardas totales.
+- Distinguir YAC total, YAC por recepción, YAC esperado y YAC sobre esperado cuando existan; registrar fuente, definiciones, temporada y número de recepciones.
+- Pantallas, motion y pases rápidos pueden facilitar espacio, sin eliminar el aporte del receptor. No asumir que toda yarda de una jugada diseñada proviene exclusivamente del coordinador.
+- Para atribuir producción a tackles evitados, velocidad o avance tras contacto se necesitan datos o revisión verificable de jugadas; no deducirlo solo de YAC agregado.
+- Evaluar el cambio de volumen y eficiencia si se reducen toques diseñados como escenario condicionado, con supuestos; no garantizar una caída ni declarar que la habilidad no se transfiere ante cualquier cambio.
+- Mantener los tres perfiles solicitados y permitir información insuficiente cuando falten evidencias.
+- No se recibió jugador ni datos concretos. El original queda intacto.
+
+Estado: 11 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
