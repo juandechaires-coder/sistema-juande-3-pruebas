@@ -32,6 +32,8 @@
 
 16. `originales/backfield_workload_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Running Back. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
 
+17. `originales/run_matchup_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Running Back, vinculado a Team Strength & Matchup. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+
 ## Revisión pendiente del prompt Anytime TD
 
 - Los porcentajes históricos se conservan como afirmaciones del texto original. Falta una fuente verificable y delimitar liga, temporadas y definición del denominador; no se consideran datos validados.
@@ -196,4 +198,14 @@
 - La comparación de doce frente a veintidós acarreos se conserva como regla orientativa del original, no como orden universal: importan mercado, línea, cuota, eficiencia y distribución del resultado.
 - No se recibieron jugador, roster ni recuentos concretos. El original queda intacto.
 
-Estado: 16 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
+## Revisión pendiente del prompt de matchup terrestre
+
+- Evaluar defensa terrestre con métricas definidas, fuente, periodo, muestra y contexto de rivales, situación y disponibilidad. Yardas terrestres permitidas por partido no separan volumen de eficiencia ni bastan para clasificar el frente.
+- Relacionar la amenaza de pase con personal, formación, down/distancia, alineaciones y frecuencia observada de cajas cargadas. Un ataque poco amenazante por aire no garantiza una caja cargada en cada jugada, y el número de defensores debe interpretarse respecto a bloqueadores y esquema.
+- Verificar lesiones y cambios de línea ofensiva con fecha y estado actual, sustituto y efecto específico en bloqueo terrestre. No deducir el impacto terrestre únicamente del rendimiento en protección de pase.
+- Identificar dirección o hueco mediante datos comparables por dirección/concepto o vídeo verificable, considerando lado de la línea, frente rival y asignaciones. No inventar un gap disponible a partir de promedios agregados; permitir dato insuficiente.
+- Distinguir debilidad observada del rival de oportunidad futura: ajustes defensivos, conceptos de carrera, movilidad del quarterback y guion pueden cambiar el enfrentamiento.
+- Mantener los tres dictámenes y permitir incertidumbre. Un frente favorable no implica superar una línea sin considerar carga esperada, línea, cuota y distribución del resultado.
+- No se recibieron jugador, rival ni datos concretos. El original queda intacto.
+
+Estado: 17 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
