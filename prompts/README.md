@@ -26,6 +26,8 @@
 
 13. `originales/attribution_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Player Performance, con aplicación transversal a la evaluación individual. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
 
+14. `originales/hidden_value_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Player Performance, con aplicación transversal a roles y aportaciones individuales. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+
 ## Revisión pendiente del prompt Anytime TD
 
 - Los porcentajes históricos se conservan como afirmaciones del texto original. Falta una fuente verificable y delimitar liga, temporadas y definición del denominador; no se consideran datos validados.
@@ -157,4 +159,15 @@
 - Mantener los tres dictámenes solicitados y permitir información insuficiente o resultados mixtos cuando no exista evidencia para una conclusión global.
 - No se recibió jugador, línea estadística ni jugadas concretas. El original queda intacto.
 
-Estado: 13 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
+## Revisión pendiente del prompt de valor oculto
+
+- Definir posición, rol y asignaciones observables antes de atribuir bloqueos, protección, rutas de arrastre, atención de cobertura u ocupación de bloqueadores. La función habitual de una posición no demuestra que el jugador la ejecute bien.
+- Distinguir ausencia en el box score tradicional de ausencia de medición: pueden existir datos de tracking, charting o evaluaciones de vídeo. Registrar fuentes, muestra y criterios de éxito.
+- Cuantificar la dependencia del éxito colectivo requiere un modelo o comparación sustentada y control de contexto. Si no existe, describir mecanismos y grado de evidencia sin inventar porcentajes ni causalidad.
+- Identificar compañeros beneficiados mediante jugadas verificables; una correlación de estadísticas o diferencias con/sin el jugador no demuestran por sí solas que él las causó.
+- Evaluar con criterios simétricos la ejecución favorable y los fallos. No asumir ni valor oculto ni excusa a partir de producción baja; permitir evidencia mixta o insuficiente.
+- Precisar qué significa «infravalorado»: por el box score, por evaluadores o por una cuota concreta. Una contribución real no demuestra que el mercado la omita ni que una apuesta tenga valor.
+- La afirmación de que es la excusa más común se conserva como parte del original, sin tratarla como frecuencia verificada. Los dictámenes no garantizan resultados.
+- No se recibió jugador, estadísticas ni evidencia de asignaciones concretas. El original queda intacto.
+
+Estado: 14 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
