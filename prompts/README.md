@@ -48,6 +48,8 @@
 
 24. `originales/goal_line_usage_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Touchdown, vinculado a Running Back y Receiver según el rol. Se conserva separado de goal_line_role_analyst: incluye targets y paquetes con tight ends. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
 
+25. `originales/red_zone_usage_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Touchdown, vinculado a Running Back y Receiver según el rol. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+
 ## Revisión pendiente del prompt Anytime TD
 
 - Los porcentajes históricos se conservan como afirmaciones del texto original. Falta una fuente verificable y delimitar liga, temporadas y definición del denominador; no se consideran datos validados.
@@ -303,4 +305,16 @@
 - Mantener los tres dictámenes, permitiendo rol incierto o información insuficiente. Un rol real no garantiza touchdown ni valor sin precio y estimación sustentada.
 - No se recibieron equipo, jugadores ni registros concretos. El original queda intacto.
 
-Estado: 24 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
+## Revisión pendiente del prompt de uso en zona roja
+
+- Definir límite de zona roja según proveedor, fuente, periodo y muestra común. Registrar recuentos y denominadores de targets y acarreos dentro de la yarda 20; no inferir participación desde yardas o snaps.
+- Mostrar por separado participación de targets y de acarreos, aclarando si el denominador terrestre incluye quarterback y otros jugadores. No sumar ambas vías como oportunidades equivalentes ni confundir targets con recepciones.
+- Comparar participación en zona roja con participación general de la misma vía y muestra. Expresar la diferencia en puntos porcentuales y distinguir proporción de volumen absoluto; si no hay oportunidades, declarar participación no estimable.
+- Medir frecuencia de llegadas del equipo con definición explícita (series o visitas, por partido o por posesión). Evitar contar cada jugada como una nueva visita; distinguir número de oportunidades de tasa de conversión.
+- Evaluar defensa rival con métrica definida, muestra y contexto: touchdowns por visita, eficacia terrestre o aérea y calidad de rivales pueden describir cosas distintas. Una tasa extrema en pocas visitas no demuestra habilidad estable.
+- Distinguir la zona roja amplia de oportunidades dentro de la 10/5 y considerar disponibilidad y cambios de rol. No tratar todas las posiciones dentro de la 20 como igual de valiosas.
+- Para receptores, complementar el uso en zona roja con volumen, rutas y explosividad fuera de ella; para híbridos revisar las dos vías sin mezclarlas.
+- Mantener los tres dictámenes, permitiendo rol mixto o información insuficiente. Participación de anotación no garantiza touchdown ni valor a una cuota concreta.
+- No se recibieron jugador, rival ni recuentos concretos. El original queda intacto.
+
+Estado: 25 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
