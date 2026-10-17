@@ -30,6 +30,8 @@
 
 15. `originales/repeatability_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Player Performance, vinculado a la evaluación de estabilidad y regresión. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
 
+16. `originales/backfield_workload_analyst.txt` — texto entregado por Juande el 16 de octubre de 2026; módulo Running Back. Número original sin identificar. Guardado íntegro; aún no se ejecuta desde la aplicación.
+
 ## Revisión pendiente del prompt Anytime TD
 
 - Los porcentajes históricos se conservan como afirmaciones del texto original. Falta una fuente verificable y delimitar liga, temporadas y definición del denominador; no se consideran datos validados.
@@ -183,4 +185,15 @@
 - Mantener los tres dictámenes solicitados y permitir información insuficiente o componentes mixtos. Una proyección de producción no demuestra valor de una apuesta sin línea, cuota y distribución estimada.
 - No se recibió jugador, línea estadística ni tamaño de muestra concretos. El original queda intacto.
 
-Estado: 15 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
+## Revisión pendiente del prompt de carga del backfield
+
+- Definir el denominador: acarreos del jugador entre acarreos de los corredores, o entre acarreos totales del equipo. Mostrar cuál se usa y tratar explícitamente carreras del quarterback, kneel-downs y otros corredores; no mezclar participaciones.
+- Registrar fuente, partidos, fechas y acarreos por encuentro. Para la participación acumulada usar sumas de acarreos de la misma muestra; un promedio simple de porcentajes por partido puede producir una cifra distinta.
+- Distinguir participación observada de volumen futuro esperado. Disponibilidad, lesiones, partidos incompletos, guion y cambios de plantilla pueden alterar la comparación de las últimas semanas.
+- Identificar roles de otros corredores mediante uso observado (primeros downs, corto yardaje, línea de gol, pase o cierre del partido). Estar en el roster o en el depth chart no demuestra trabajo significativo.
+- Snap share no equivale a carry share. Para evaluar situaciones de pase diferenciar rutas, targets y bloqueos de protección; salir en esos downs puede reducir oportunidades de recepción sin determinar automáticamente el volumen de acarreos.
+- Una tendencia requiere datos comparables por partido; no inferirla de un único encuentro ni fijar categorías de workhorse/comité sin explicar criterios. Permitir rol incierto o información insuficiente.
+- La comparación de doce frente a veintidós acarreos se conserva como regla orientativa del original, no como orden universal: importan mercado, línea, cuota, eficiencia y distribución del resultado.
+- No se recibieron jugador, roster ni recuentos concretos. El original queda intacto.
+
+Estado: 16 textos originales recuperados; los restantes siguen pendientes. La conservación del archivo no equivale a integración funcional de los 27 prompts.
