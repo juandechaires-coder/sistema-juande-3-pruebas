@@ -87,3 +87,8 @@ Función `juande-analyze` activa en Supabase de pruebas. Autentica la sesión y 
 Sustituida la conexión anterior por Gemini 2.5 Flash fijo. Cinco reservas por día UTC, máximo dos llamadas por investigación, límites de entrada/salida y sin reintentos, modelos alternativos ni servicios de pago. Error 429 detiene la consulta. La configuración anterior no activa el servicio.
 
 Activación bloqueada hasta guardar la clave privada de un proyecto Google Free sin facturación y confirmar esa condición en secretos. El servicio no verifica Cloud Billing: mantener Google sin facturación y Supabase en Free es condición externa. Sin credencial disponible no se ha hecho una investigación real. 15 pruebas de servicio y las suites de análisis, recuperación y finanzas pasan. Sin prueba visual en navegador ni cambios en producción.
+
+
+## Pantalla simplificada · 17 octubre 2026
+
+Análisis con un botón principal, selección automática por tipo/rol y resultados en texto claro. Los 26 enfoques, el JSON, la revisión detallada, los análisis guardados y los respaldos están en apartados desplegables. Se unifica la fecha/hora del evento, la hora del precio se completa al capturarlo y los tipos de equipos/carrera/recepción sugieren su rol. Las reglas desconocidas se envían como pendientes explícitos. Cambiar el caso oculta el informe anterior; nada se aprueba automáticamente. La investigación y los límites gratuitos conservan el servicio existente. Verificaciones: estructura HTML, referencias, sintaxis y 43 grupos de pruebas correctos; sin verificación visual de navegador.
