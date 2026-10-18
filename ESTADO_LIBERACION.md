@@ -1,3 +1,32 @@
+# Estado actual · revisión del 17 de octubre de 2026 (México)
+
+**Dictamen: NO sustituir todavía producción.** La integración de pruebas está publicada; faltan el ensayo real de IA y la preparación específica del entorno productivo. Los apartados posteriores son el historial de implementación y no sustituyen este estado.
+
+## Comprobado en esta revisión
+
+- 43 grupos automatizados aprobados, que incluyen 64 escenarios de análisis, servicio simulado, recuperación y finanzas. No equivalen a una investigación real ni a una prueba visual en Safari.
+- Gemini está configurado y habilitado en pruebas, modelo fijo 2.5 Flash, cinco reservas/día, dos llamadas como máximo, sin reintentos ni alternativas de pago. Google AI Studio mostró Free en la captura del propietario.
+- Organización Supabase verificada por la API: plan free/tier_free. Los dos proyectos están ACTIVE_HEALTHY; no se contrataron servicios ni se modificó facturación.
+- El contador real de solicitudes IA está en cero. Todavía no se ha reservado una investigación desde la aplicación.
+- Producción tiene dos tablas: published_radar (96 filas) y user_records (1 fila), con RLS. El Radar permite lectura pública; los registros privados tienen políticas propias de SELECT/INSERT/UPDATE/DELETE. Los conteos reflejan la consulta, no un respaldo ni una validación REST completa.
+- Producción no tiene Edge Functions ni las tablas sj3_* utilizadas por el laboratorio. La cuenta Auth de pruebas no coincide por correo con la única cuenta de producción; confirmar la cuenta productiva y autorizar su identificador, sin trasladar el hash de pruebas a ciegas.
+
+## Integración requerida antes del cambio
+
+1. Ejecutar un caso real prematch desde analisis.html con la sesión de pruebas. Confirmar búsqueda y fuentes trazables, informe válido, guardado y reapertura. Si falla, corregir antes del corte; no activar facturación ni servicios alternativos.
+2. Construir el candidato de producción preservando la clave `juande-mobile-reset-20261012-v1`, el panel Supabase existente, el Radar público y la copia privada. El laboratorio usa `sj3-beta3-lab-main-v1` y sustituye cloudMerged por lectura local: copiar su index.html directamente ocultaría datos locales anteriores y retiraría funciones de nube.
+3. Incorporar tablas de investigación/cuotas, políticas y Edge Function al proyecto productivo mediante migraciones nuevas revisadas. Conservar published_radar/user_records. La primera migración del laboratorio crea solo la cuota: no es un instalador completo de las cuatro tablas sj3_* preexistentes. Generar y probar el esquema completo antes de aplicarlo.
+4. Cambiar todas las URLs y claves públicas de pruebas por configuración de producción, y registrar por separado los secretos gratuitos en ese proyecto. No pueden copiarse claves privadas mediante las herramientas disponibles y nunca deben entrar en GitHub. Verificar la cuenta autorizada.
+5. Respaldar los datos productivos de nube y exportar el estado local desde el iPhone (ese almacenamiento no es accesible al servidor). Verificar restauración y hacer prueba de aceptación móvil con copia, recuperación, fichas, precios, picks y un parlay sin doble conteo.
+
+## Corte y retorno
+
+Cabeza de producción inspeccionada: `26fdf18ed108f353c79af3bdb78bb1a64783dd1b`. Pruebas: `43130b3b1600f9e5c810d74a5bf17d131ab157f6`. Mantener un respaldo verificable y una rama/tag de retorno antes del corte. Volver al HTML anterior no revierte operaciones de base de datos ni datos locales, por lo que el corte debe ser aditivo y sin borrados.
+
+No se modificó producción durante esta revisión. El paso inmediato del propietario es iniciar una investigación real desde el enlace de pruebas; no compartir contraseña ni clave API en el chat. El resto de la integración puede prepararse sin sustituir la aplicación actual.
+
+---
+
 # Sistema Juande 3.0 — preparación para el 16 de octubre de 2026
 
 Objetivo: liberar el viernes 16 de octubre. Estado: laboratorio; aún no aprobado para producción.
